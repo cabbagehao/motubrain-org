@@ -1,0 +1,382 @@
+{
+  "header": {
+    "id": "header",
+    "brand": {
+      "title": "Motubrain.org",
+      "logo": {
+        "src": "/motubrain-mark.svg",
+        "alt": "Motubrain.org"
+      },
+      "url": "/"
+    },
+    "nav": {
+      "items": [
+        {
+          "title": "核心事实",
+          "url": "/#facts",
+          "target": "_self"
+        },
+        {
+          "title": "架构",
+          "url": "/#architecture",
+          "target": "_self"
+        },
+        {
+          "title": "FAQ",
+          "url": "/#faq",
+          "target": "_self"
+        }
+      ]
+    },
+    "buttons": [
+      {
+        "title": "官方来源",
+        "url": "https://www.shengshu.com/en/motubrain",
+        "target": "_blank",
+        "variant": "outline",
+        "icon": "ArrowUpRight"
+      }
+    ],
+    "user_nav": {
+      "show_name": false,
+      "show_credits": false,
+      "show_sign_out": false,
+      "items": []
+    },
+    "show_sign": false,
+    "show_theme": true,
+    "show_locale": true
+  },
+  "hero": {
+    "id": "hero",
+    "title": "Motubrain：面向具身智能的世界动作模型",
+    "highlight_text": "Motubrain",
+    "description": "一个独立的中英文资料页，用来解释生数科技 Motubrain 的发布背景、基准成绩、架构思路和当前访问状态。",
+    "buttons": [
+      {
+        "title": "查看核心事实",
+        "url": "/#facts",
+        "target": "_self",
+        "icon": "BookOpenText"
+      },
+      {
+        "title": "打开官方来源",
+        "url": "https://www.shengshu.com/en/motubrain",
+        "target": "_blank",
+        "variant": "outline",
+        "icon": "ArrowUpRight"
+      }
+    ],
+    "tip": "独立资料页。Motubrain.org 与生数科技没有官方隶属关系。",
+    "show_avatars": false,
+    "show_award": false,
+    "show_bg": true,
+    "image": {
+      "src": "/motubrain-preview.svg",
+      "alt": "Motubrain 世界动作模型抽象图"
+    }
+  },
+  "logos": {
+    "id": "logos",
+    "disabled": true,
+    "title": "",
+    "items": []
+  },
+  "introduce": {
+    "block": "features-list",
+    "id": "facts",
+    "title": "Motubrain 是什么？",
+    "description": "Motubrain 被生数科技定义为 World Action Model（世界动作模型）：一种把机器人“看到的世界”和“要采取的动作”放进统一框架的具身智能模型。",
+    "image": {
+      "src": "/motubrain-preview.svg",
+      "alt": "Motubrain 模型概览"
+    },
+    "items": [
+      {
+        "title": "世界动作模型",
+        "description": "官方叙述强调它不只是生成或预测视频，而是把感知、预测和机器人动作结合到同一个系统中。",
+        "icon": "Brain",
+        "image": {
+          "src": "/motubrain-preview.svg",
+          "alt": "世界动作模型"
+        }
+      },
+      {
+        "title": "面向具身智能",
+        "description": "发布信息描述的是机器人在家庭、工业和商业空间中执行任务，不是普通聊天机器人或 AI 记忆工具。",
+        "icon": "RiRobot2Line",
+        "image": {
+          "src": "/motubrain-preview.svg",
+          "alt": "具身智能"
+        }
+      },
+      {
+        "title": "以来源为准",
+        "description": "截至 2026 年 4 月 29 日，官方材料说明了模型和基准成绩，但没有展示公开自助 API、下载或演示入口。",
+        "icon": "ShieldCheck",
+        "image": {
+          "src": "/motubrain-preview.svg",
+          "alt": "来源状态"
+        }
+      },
+      {
+        "title": "名称写法",
+        "description": "搜索中会出现 Motubrain 和 MotuBrain 两种写法。除非来源另有说明，本站将二者视为同一世界动作模型。",
+        "icon": "Search",
+        "image": {
+          "src": "/motubrain-preview.svg",
+          "alt": "名称写法"
+        }
+      }
+    ],
+    "className": "bg-muted"
+  },
+  "benefits": {
+    "block": "features-accordion",
+    "id": "architecture",
+    "title": "世界动作模型如何工作",
+    "description": "核心思路是让视频、语言和动作一起学习，使机器人既能判断接下来会发生什么，也能生成下一步该做什么。",
+    "items": [
+      {
+        "title": "视频动态与动作统一",
+        "description": "生数科技称 Motubrain 将视频和动作作为连续模态共同学习，因此世界预测和动作生成不是后期拼接的两个模块。",
+        "icon": "RiVideoLine",
+        "image": {
+          "src": "/motubrain-preview.svg",
+          "alt": "视频动态与动作"
+        }
+      },
+      {
+        "title": "一次训练覆盖五类能力",
+        "description": "发布信息称其一次训练覆盖 VLA 控制、世界建模、视频生成、逆动力学建模和视频-动作联合预测。",
+        "icon": "Layers",
+        "image": {
+          "src": "/motubrain-preview.svg",
+          "alt": "统一能力"
+        }
+      },
+      {
+        "title": "执行中的预判能力",
+        "description": "官方叙述强调模型能在动作过程中预测环境变化，帮助机器人在物理尝试失败时重试或调整。",
+        "icon": "RiEyeLine",
+        "image": {
+          "src": "/motubrain-preview.svg",
+          "alt": "预判能力"
+        }
+      }
+    ]
+  },
+  "usage": {
+    "block": "features-step",
+    "id": "sources",
+    "title": "如何阅读这些发布信息",
+    "description": "在把任何模型成绩视为定论前，先看清来源和评测语境。",
+    "image": {
+      "src": "/motubrain-preview.svg",
+      "alt": "来源路径"
+    },
+    "image_position": "left",
+    "text_align": "center",
+    "items": [
+      {
+        "title": "先看官方页面",
+        "description": "生数科技 Motubrain 页面给出了能力、合作伙伴和基准成绩的官方表述。",
+        "image": {
+          "src": "/motubrain-preview.svg",
+          "alt": "官方页面"
+        }
+      },
+      {
+        "title": "再看基准机制",
+        "description": "WorldArena 解释 EWM Score，RoboTwin 2.0 文档说明双臂机器人操作基准的评测背景。",
+        "image": {
+          "src": "/motubrain-preview.svg",
+          "alt": "基准机制"
+        }
+      },
+      {
+        "title": "区分了解与使用",
+        "description": "当前公开资料可以帮助了解 Motubrain，但本站没有发现官方自助 API、可下载模型或公开演示入口。",
+        "image": {
+          "src": "/motubrain-preview.svg",
+          "alt": "访问状态"
+        }
+      }
+    ],
+    "className": "bg-muted"
+  },
+  "features": {
+    "id": "features",
+    "title": "为什么机器人行业关注 Motubrain",
+    "description": "发布信息将 Motubrain 描述为从任务专用机器人系统走向可扩展具身智能的一步。",
+    "items": [
+      {
+        "title": "一个大脑，多种技能",
+        "description": "官方材料称，任务种类越多，多任务表现越强，而不是为每个技能单独训练一套系统。",
+        "icon": "RiTaskLine"
+      },
+      {
+        "title": "一个大脑，适配多种机器人",
+        "description": "Motubrain 被定位为跨本体模型，目标是适配不同机器人形态，而不是绑定某一个硬件平台。",
+        "icon": "RiRobot2Line"
+      },
+      {
+        "title": "长程任务执行",
+        "description": "官方称模型直接学习完整任务序列，覆盖比短原子动作更复杂的多步骤任务。",
+        "icon": "RiStackLine"
+      },
+      {
+        "title": "WorldArena 语境",
+        "description": "WorldArena 从感知和功能效用两个方向评估具身世界模型，其中包括动作规划角色。",
+        "icon": "RiBarChart2Line"
+      },
+      {
+        "title": "RoboTwin 2.0 语境",
+        "description": "RoboTwin 2.0 是包含 50 个任务并带有域随机化的大规模双臂操作基准。",
+        "icon": "Activity"
+      },
+      {
+        "title": "谨慎的来源姿态",
+        "description": "本站展示的基准数字是来源声明，不是 Motubrain.org 对模型成绩的独立认证。",
+        "icon": "ShieldCheck"
+      }
+    ]
+  },
+  "stats": {
+    "id": "stats",
+    "title": "基准成绩速览",
+    "description": "截至 2026 年 4 月 29 日，官方或基准来源中出现的关键信息。",
+    "items": [
+      {
+        "title": "63.77",
+        "description": "生数科技为 Motubrain 报告的 WorldArena EWM Score"
+      },
+      {
+        "title": "95.8 / 96.1",
+        "description": "官方页面报告的 RoboTwin 2.0 clean 与 randomized 成绩"
+      },
+      {
+        "title": "2026-04-29",
+        "description": "生数科技 PRNewswire 新闻稿中的公开发布日期"
+      }
+    ],
+    "className": "bg-muted"
+  },
+  "testimonials": {
+    "id": "testimonials",
+    "disabled": true,
+    "title": "",
+    "description": "",
+    "items": []
+  },
+  "faq": {
+    "id": "faq",
+    "title": "Motubrain 常见问题",
+    "items": [
+      {
+        "question": "Motubrain 是什么？",
+        "answer": "Motubrain 是生数科技发布的 World Action Model（世界动作模型），面向具身机器人。官方描述中，它把感知、预测、语言理解和机器人动作连接在统一模型中。"
+      },
+      {
+        "question": "Motubrain.org 是官网吗？",
+        "answer": "不是。Motubrain.org 是独立资料页。Motubrain 的官方页面由生数科技托管在 shengshu.com。"
+      },
+      {
+        "question": "这里能使用 Motubrain API 或演示吗？",
+        "answer": "不能。截至 2026 年 4 月 29 日，本站查看到的公开官方材料没有展示自助 API、可下载模型或公开演示入口。"
+      },
+      {
+        "question": "Motubrain 公布了哪些基准成绩？",
+        "answer": "生数科技报告 Motubrain 在 WorldArena 上取得 63.77 EWM Score，在 RoboTwin 2.0 clean 与 randomized 设置下分别为 95.8 和 96.1。除非后续有独立更新，建议把这些数字视为来源声明。"
+      },
+      {
+        "question": "世界动作模型和普通世界模型有什么不同？",
+        "answer": "普通世界模型通常强调预测场景如何演化。Motubrain 的 World Action Model 叙述额外强调动作生成，让模型在预测世界变化的同时生成机器人动作。"
+      },
+      {
+        "question": "为什么 Motubrain 报道里会提到 Vidu？",
+        "answer": "Vidu 是生数科技的视频生成平台。生数科技把 Motubrain 描述为从视频模拟能力延伸到物理动作能力的具身智能方向。"
+      }
+    ]
+  },
+  "footer": {
+    "id": "footer",
+    "brand": {
+      "title": "Motubrain.org",
+      "description": "Motubrain 世界动作模型的独立中英文资料页。本站与生数科技没有官方隶属关系。",
+      "logo": {
+        "src": "/motubrain-mark.svg",
+        "alt": "Motubrain.org"
+      },
+      "url": "/"
+    },
+    "nav": {
+      "items": [
+        {
+          "title": "浏览",
+          "children": [
+            {
+              "title": "核心事实",
+              "url": "/#facts",
+              "target": "_self"
+            },
+            {
+              "title": "架构",
+              "url": "/#architecture",
+              "target": "_self"
+            },
+            {
+              "title": "FAQ",
+              "url": "/#faq",
+              "target": "_self"
+            }
+          ]
+        },
+        {
+          "title": "来源",
+          "children": [
+            {
+              "title": "生数科技 Motubrain",
+              "url": "https://www.shengshu.com/en/motubrain",
+              "target": "_blank"
+            },
+            {
+              "title": "WorldArena",
+              "url": "https://world-arena.ai/",
+              "target": "_blank"
+            },
+            {
+              "title": "RoboTwin 2.0",
+              "url": "https://huggingface.co/docs/lerobot/main/robotwin",
+              "target": "_blank"
+            }
+          ]
+        }
+      ]
+    },
+    "social": {
+      "items": [
+        {
+          "title": "Email",
+          "icon": "Mail",
+          "url": "mailto:support@motubrain.org",
+          "target": "_self"
+        }
+      ]
+    },
+    "agreement": {
+      "items": [
+        {
+          "title": "Privacy Policy",
+          "url": "/privacy-policy"
+        },
+        {
+          "title": "Terms of Service",
+          "url": "/terms-of-service"
+        }
+      ]
+    },
+    "show_theme": true,
+    "show_locale": true
+  }
+}

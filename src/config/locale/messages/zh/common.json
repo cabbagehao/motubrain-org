@@ -1,0 +1,55 @@
+{
+  "metadata": {
+    "title": "Motubrain 中文解读：面向具身智能的世界动作模型",
+    "description": "Motubrain.org 用中文解释生数科技 Motubrain 世界动作模型的发布背景、基准成绩、架构思路、访问状态和官方来源。"
+  },
+  "sign": {
+    "sign_in_title": "登录",
+    "sign_in_description": "登录你的账户",
+    "sign_up_title": "注册",
+    "sign_up_description": "创建账户",
+    "email_title": "邮箱",
+    "email_placeholder": "请输入邮箱",
+    "password_title": "密码",
+    "password_placeholder": "请输入密码",
+    "forgot_password": "忘记密码？",
+    "or": "或",
+    "continue": "继续",
+    "no_account": "还没有账户？",
+    "already_have_account": "已有账户？",
+    "email_sign_in": "使用邮箱登录",
+    "google_sign_in_title": "使用 Google 登录",
+    "github_sign_in_title": "使用 GitHub 登录",
+    "close_title": "关闭",
+    "cancel_title": "取消",
+    "sign_out_title": "退出登录",
+    "billing_title": "账单",
+    "name_title": "姓名",
+    "name_placeholder": "请输入姓名",
+    "email_verification_hint": "请使用可访问的邮箱。注册后需要验证邮箱。",
+    "admin_title": "管理系统",
+    "credits_title": "积分：{credits}",
+    "verify_email_sent": "验证邮件已发送，请检查收件箱。",
+    "verify_email_required": "请先验证邮箱后再登录。",
+    "resend_verification": "重新发送验证邮件",
+    "resend_verification_sent": "验证邮件已重新发送，请检查收件箱。",
+    "verify_email_page_title": "检查你的邮箱",
+    "verify_email_page_description": "请点击发送到以下邮箱的链接：",
+    "verify_email_continue": "继续",
+    "verify_email_tip": "验证完成后点击“继续”。",
+    "verify_email_not_verified_yet": "尚未验证。请先点击邮件中的链接。",
+    "verify_email_account_mismatch": "当前登录为 {current}，此页面等待 {expected}。",
+    "resend_verification_countdown": "重新发送验证邮件（{seconds} 秒）",
+    "resend_verification_wait": "请等待 {seconds} 秒后重试。",
+    "back_to_sign_in": "返回登录"
+  },
+  "payment": {
+    "choose_payment_method": "选择支付方式",
+    "choose_payment_method_description": "",
+    "cancel_title": "取消"
+  },
+  "locale_detector": {
+    "title": "检测到你的浏览器语言是 {locale}，是否切换？",
+    "switch_to": "切换到 {locale}"
+  }
+}

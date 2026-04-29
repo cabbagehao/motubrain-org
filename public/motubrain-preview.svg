@@ -1,0 +1,55 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1440" height="810" viewBox="0 0 1440 810" role="img" aria-labelledby="title desc">
+  <title id="title">Motubrain world action model diagram</title>
+  <desc id="desc">Abstract diagram of video, language, and action streams combining into embodied robot tasks.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#f8fbfa"/>
+      <stop offset="0.55" stop-color="#eef7f4"/>
+      <stop offset="1" stop-color="#fff7e6"/>
+    </linearGradient>
+    <linearGradient id="line" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#0f766e"/>
+      <stop offset="1" stop-color="#f59e0b"/>
+    </linearGradient>
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="18" stdDeviation="22" flood-color="#0b1220" flood-opacity="0.14"/>
+    </filter>
+  </defs>
+  <rect width="1440" height="810" fill="url(#bg)"/>
+  <g opacity="0.45">
+    <path d="M0 130h1440M0 260h1440M0 390h1440M0 520h1440M0 650h1440" stroke="#cbded8"/>
+    <path d="M170 0v810M360 0v810M550 0v810M740 0v810M930 0v810M1120 0v810M1310 0v810" stroke="#d8e7e2"/>
+  </g>
+  <g filter="url(#shadow)">
+    <rect x="118" y="130" width="312" height="178" rx="20" fill="#ffffff" stroke="#cfe0db"/>
+    <rect x="118" y="356" width="312" height="178" rx="20" fill="#ffffff" stroke="#cfe0db"/>
+    <rect x="118" y="582" width="312" height="118" rx="20" fill="#ffffff" stroke="#cfe0db"/>
+    <rect x="547" y="236" width="346" height="252" rx="28" fill="#0b1220"/>
+    <rect x="1010" y="150" width="312" height="170" rx="20" fill="#ffffff" stroke="#cfe0db"/>
+    <rect x="1010" y="390" width="312" height="170" rx="20" fill="#ffffff" stroke="#cfe0db"/>
+  </g>
+  <g font-family="ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, Segoe UI, sans-serif">
+    <text x="154" y="184" fill="#0f172a" font-size="30" font-weight="700">Video dynamics</text>
+    <text x="154" y="230" fill="#475569" font-size="20">world state over time</text>
+    <text x="154" y="410" fill="#0f172a" font-size="30" font-weight="700">Language intent</text>
+    <text x="154" y="456" fill="#475569" font-size="20">task, object, context</text>
+    <text x="154" y="632" fill="#0f172a" font-size="30" font-weight="700">Action traces</text>
+    <text x="154" y="672" fill="#475569" font-size="20">robot motion signals</text>
+    <text x="607" y="312" fill="#f8fafc" font-size="40" font-weight="800">Motubrain</text>
+    <text x="607" y="362" fill="#a7f3d0" font-size="24">World Action Model</text>
+    <text x="607" y="412" fill="#d1fae5" font-size="20">perception + prediction + action</text>
+    <text x="1048" y="207" fill="#0f172a" font-size="30" font-weight="700">Embodied plan</text>
+    <text x="1048" y="252" fill="#475569" font-size="20">next state, next move</text>
+    <text x="1048" y="447" fill="#0f172a" font-size="30" font-weight="700">Robot execution</text>
+    <text x="1048" y="492" fill="#475569" font-size="20">adapt, retry, complete</text>
+  </g>
+  <path d="M430 219 C510 219 492 315 547 315" fill="none" stroke="url(#line)" stroke-width="8" stroke-linecap="round"/>
+  <path d="M430 445 C500 445 500 395 547 395" fill="none" stroke="url(#line)" stroke-width="8" stroke-linecap="round"/>
+  <path d="M430 642 C510 642 500 472 547 452" fill="none" stroke="url(#line)" stroke-width="8" stroke-linecap="round"/>
+  <path d="M893 340 C950 300 963 235 1010 235" fill="none" stroke="url(#line)" stroke-width="8" stroke-linecap="round"/>
+  <path d="M893 410 C955 420 960 475 1010 475" fill="none" stroke="url(#line)" stroke-width="8" stroke-linecap="round"/>
+  <circle cx="720" cy="365" r="70" fill="#14b8a6" opacity="0.22"/>
+  <circle cx="720" cy="365" r="38" fill="#f59e0b" opacity="0.26"/>
+  <path d="M685 382c14-38 42-58 78-61" fill="none" stroke="#f8fafc" stroke-width="9" stroke-linecap="round"/>
+  <path d="M672 342h48l22 28 30-54h46" fill="none" stroke="#a7f3d0" stroke-width="9" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>

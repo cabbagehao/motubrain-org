@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="128" height="128" viewBox="0 0 128 128" role="img" aria-labelledby="title desc">
+  <title id="title">Motubrain.org mark</title>
+  <desc id="desc">Abstract mark showing a robot action model node network.</desc>
+  <rect width="128" height="128" rx="28" fill="#0b1220"/>
+  <circle cx="64" cy="64" r="38" fill="#0f766e" opacity="0.18"/>
+  <circle cx="64" cy="64" r="23" fill="#14b8a6" opacity="0.25"/>
+  <path d="M37 78c7-18 18-28 32-31 12-2 23 2 31 11" fill="none" stroke="#f59e0b" stroke-width="7" stroke-linecap="round"/>
+  <path d="M32 50h24l11 14 15-25h18" fill="none" stroke="#d9fff7" stroke-width="7" stroke-linecap="round" stroke-linejoin="round"/>
+  <circle cx="32" cy="50" r="7" fill="#d9fff7"/>
+  <circle cx="100" cy="39" r="7" fill="#d9fff7"/>
+  <circle cx="37" cy="78" r="7" fill="#f59e0b"/>
+  <circle cx="100" cy="58" r="7" fill="#f59e0b"/>
+</svg>

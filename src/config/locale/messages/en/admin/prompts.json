@@ -1,0 +1,47 @@
+{
+  "fields": {
+    "title": "Title",
+    "description": "Description",
+    "image": "Image",
+    "prompt_title": "Prompt Title",
+    "prompt_description": "Prompt Description",
+    "status": "Status",
+    "created_at": "Created At",
+    "updated_at": "Updated At"
+  },
+  "list": {
+    "title": "Prompts",
+    "crumbs": {
+      "admin": "Admin",
+      "prompts": "Prompts"
+    },
+    "buttons": {
+      "add": "Add Prompt",
+      "edit": "Edit Prompt",
+      "view": "View Prompt",
+      "delete": "Delete Prompt"
+    }
+  },
+  "add": {
+    "title": "Add Prompt",
+    "crumbs": {
+      "admin": "Admin",
+      "prompts": "Prompts",
+      "add": "Add Prompt"
+    },
+    "buttons": {
+      "submit": "Add Prompt"
+    }
+  },
+  "edit": {
+    "title": "Edit Prompt",
+    "crumbs": {
+      "admin": "Admin",
+      "prompts": "Prompts",
+      "edit": "Edit Prompt"
+    },
+    "buttons": {
+      "submit": "Edit Prompt"
+    }
+  }
+}

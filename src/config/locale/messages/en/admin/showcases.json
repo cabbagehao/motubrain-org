@@ -1,0 +1,15 @@
+{
+  "title": "Showcases",
+  "description": "Manage your showcases here.",
+  "add": "Add",
+  "edit": "Edit",
+  "delete": "Delete",
+  "form": {
+    "title": "Title",
+    "description": "Description",
+    "prompt": "Prompt",
+    "image": "Image",
+    "tags": "Tags",
+    "createdAt": "Created At"
+  }
+}

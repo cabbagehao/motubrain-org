@@ -1,0 +1,357 @@
+{
+  "header": {
+    "id": "header",
+    "brand": {
+      "title": "Motubrain.org",
+      "logo": {
+        "src": "/motubrain-mark.svg",
+        "alt": "Motubrain.org"
+      },
+      "url": "/"
+    },
+    "nav": {
+      "items": [
+        {
+          "title": "Facts",
+          "url": "/#facts",
+          "target": "_self"
+        },
+        {
+          "title": "Architecture",
+          "url": "/#architecture",
+          "target": "_self"
+        },
+        {
+          "title": "FAQ",
+          "url": "/#faq",
+          "target": "_self"
+        }
+      ]
+    },
+    "buttons": [
+      {
+        "title": "Official source",
+        "url": "https://www.shengshu.com/en/motubrain",
+        "target": "_blank",
+        "variant": "outline",
+        "icon": "ArrowUpRight"
+      }
+    ],
+    "user_nav": {
+      "show_name": false,
+      "show_credits": false,
+      "show_sign_out": false,
+      "items": []
+    },
+    "show_sign": false,
+    "show_theme": true,
+    "show_locale": true
+  },
+  "hero": {
+    "id": "hero",
+    "title": "Motubrain: the World Action Model for embodied AI",
+    "highlight_text": "Motubrain",
+    "description": "An independent bilingual guide to ShengShu Technology's Motubrain launch, benchmark claims, architecture, and current access status.",
+    "buttons": [
+      {
+        "title": "Read the key facts",
+        "url": "/#facts",
+        "target": "_self",
+        "icon": "BookOpenText"
+      },
+      {
+        "title": "Open official source",
+        "url": "https://www.shengshu.com/en/motubrain",
+        "target": "_blank",
+        "variant": "outline",
+        "icon": "ArrowUpRight"
+      }
+    ],
+    "tip": "Independent resource. Motubrain.org is not affiliated with ShengShu Technology.",
+    "show_avatars": false,
+    "show_award": false,
+    "show_bg": true,
+    "image": {
+      "src": "/motubrain-preview.svg",
+      "alt": "Abstract Motubrain world action model diagram"
+    }
+  },
+  "logos": {
+    "id": "logos",
+    "disabled": true,
+    "title": "",
+    "items": []
+  },
+  "introduce": {
+    "block": "features-list",
+    "id": "facts",
+    "title": "What is Motubrain?",
+    "description": "Motubrain is presented by ShengShu Technology as a World Action Model: a unified embodied AI model that connects what a robot sees with the actions it should take.",
+    "image": {
+      "src": "/motubrain-preview.svg",
+      "alt": "Motubrain model overview"
+    },
+    "items": [
+      {
+        "title": "World Action Model",
+        "description": "The official framing moves beyond video-only world modeling by joining perception, prediction, and robot action in one system.",
+        "icon": "Brain",
+        "image": {
+          "src": "/motubrain-preview.svg",
+          "alt": "World action model"
+        }
+      },
+      {
+        "title": "Embodied AI Focus",
+        "description": "The launch describes robots acting across homes, industrial spaces, and commercial environments rather than a consumer chatbot or memory app.",
+        "icon": "RiRobot2Line",
+        "image": {
+          "src": "/motubrain-preview.svg",
+          "alt": "Embodied AI"
+        }
+      },
+      {
+        "title": "Source-Led Status",
+        "description": "As of April 29, 2026, official pages explain the model and its benchmark claims, but do not show a public self-serve API or download.",
+        "icon": "ShieldCheck",
+        "image": {
+          "src": "/motubrain-preview.svg",
+          "alt": "Source status"
+        }
+      },
+      {
+        "title": "Name Variants",
+        "description": "Searches may use Motubrain or MotuBrain. This guide treats both as the same ShengShu World Action Model unless a source says otherwise.",
+        "icon": "Search",
+        "image": {
+          "src": "/motubrain-preview.svg",
+          "alt": "Motubrain name variants"
+        }
+      }
+    ],
+    "className": "bg-muted"
+  },
+  "benefits": {
+    "block": "features-accordion",
+    "id": "architecture",
+    "title": "How the World Action Model works",
+    "description": "The core idea is to learn video, language, and action together so a robot can reason about what changes next and what to do next.",
+    "items": [
+      {
+        "title": "Video dynamics plus action",
+        "description": "ShengShu describes Motubrain as learning video and action as continuous modalities, so world prediction and action generation are trained together rather than bolted together.",
+        "icon": "RiVideoLine",
+        "image": {
+          "src": "/motubrain-preview.svg",
+          "alt": "Video dynamics and action"
+        }
+      },
+      {
+        "title": "Five capabilities in one training run",
+        "description": "The launch says one training process covers VLA control, world modeling, video generation, inverse dynamics modeling, and joint video-action prediction.",
+        "icon": "Layers",
+        "image": {
+          "src": "/motubrain-preview.svg",
+          "alt": "Unified capabilities"
+        }
+      },
+      {
+        "title": "Foresight during execution",
+        "description": "The model is positioned as anticipating environmental changes while driving actions, helping robots retry or adapt when a physical attempt does not work.",
+        "icon": "RiEyeLine",
+        "image": {
+          "src": "/motubrain-preview.svg",
+          "alt": "Foresight"
+        }
+      }
+    ]
+  },
+  "usage": {
+    "block": "features-step",
+    "id": "sources",
+    "title": "How to read the launch claims",
+    "description": "Use the source trail before treating any model score as independently settled.",
+    "image": {
+      "src": "/motubrain-preview.svg",
+      "alt": "Source trail"
+    },
+    "image_position": "left",
+    "text_align": "center",
+    "items": [
+      {
+        "title": "Start with the official page",
+        "description": "Use ShengShu's Motubrain page for the stated capabilities, partner context, and benchmark figures.",
+        "image": {
+          "src": "/motubrain-preview.svg",
+          "alt": "Official page"
+        }
+      },
+      {
+        "title": "Check benchmark mechanics",
+        "description": "WorldArena explains EWM Score, while RoboTwin 2.0 documents the dual-arm manipulation benchmark context.",
+        "image": {
+          "src": "/motubrain-preview.svg",
+          "alt": "Benchmark mechanics"
+        }
+      },
+      {
+        "title": "Separate access from awareness",
+        "description": "The current public materials explain Motubrain, but this site found no official self-serve API, downloadable model, or public demo.",
+        "image": {
+          "src": "/motubrain-preview.svg",
+          "alt": "Access status"
+        }
+      }
+    ],
+    "className": "bg-muted"
+  },
+  "features": {
+    "id": "features",
+    "title": "Why robotics teams are watching Motubrain",
+    "description": "The launch frames Motubrain as a shift from task-specific robot systems toward scalable embodied intelligence.",
+    "items": [
+      {
+        "title": "One brain, many skills",
+        "description": "Official materials say task variety improves multi-task performance instead of requiring isolated skill training for every behavior.",
+        "icon": "RiTaskLine"
+      },
+      {
+        "title": "One brain, any robot",
+        "description": "Motubrain is positioned as cross-embodiment, designed to adapt across robot types rather than being tied to one hardware platform.",
+        "icon": "RiRobot2Line"
+      },
+      {
+        "title": "Long-horizon execution",
+        "description": "The model is described as learning full task sequences directly, including complex multi-step work beyond short atomic actions.",
+        "icon": "RiStackLine"
+      },
+      {
+        "title": "WorldArena context",
+        "description": "WorldArena evaluates embodied world models across perceptual and functional utility, including action-planning roles.",
+        "icon": "RiBarChart2Line"
+      },
+      {
+        "title": "RoboTwin 2.0 context",
+        "description": "RoboTwin 2.0 is a large-scale dual-arm manipulation benchmark with 50 tasks and domain randomization.",
+        "icon": "Activity"
+      },
+      {
+        "title": "Careful source posture",
+        "description": "Benchmark numbers on this site are reported as source claims, not independent certification by Motubrain.org.",
+        "icon": "ShieldCheck"
+      }
+    ]
+  },
+  "stats": {
+    "id": "stats",
+    "title": "Benchmark snapshot",
+    "description": "Key figures reported by official or benchmark sources as of April 29, 2026.",
+    "items": [
+      {
+        "title": "63.77",
+        "description": "WorldArena EWM Score reported by ShengShu for Motubrain"
+      },
+      {
+        "title": "95.8 / 96.1",
+        "description": "RoboTwin 2.0 clean and randomized scores reported on the official page"
+      },
+      {
+        "title": "Apr 29, 2026",
+        "description": "Public launch date in the ShengShu PRNewswire announcement"
+      }
+    ],
+    "className": "bg-muted"
+  },
+  "testimonials": {
+    "id": "testimonials",
+    "disabled": true,
+    "title": "",
+    "description": "",
+    "items": []
+  },
+  "faq": {
+    "id": "faq",
+    "title": "Frequently asked questions about Motubrain",
+    "items": [
+      {
+        "question": "What is Motubrain?",
+        "answer": "Motubrain is ShengShu Technology's World Action Model for embodied robots. It is described as a unified model that connects perception, prediction, language understanding, and robot action."
+      },
+      {
+        "question": "Is Motubrain.org the official Motubrain website?",
+        "answer": "No. Motubrain.org is an independent information hub. The official Motubrain page is hosted by ShengShu Technology at shengshu.com."
+      },
+      {
+        "question": "Can I use a Motubrain API or demo here?",
+        "answer": "No. As of April 29, 2026, the public official materials reviewed for this site do not show a self-serve Motubrain API, downloadable model, or public demo."
+      },
+      {
+        "question": "What benchmark scores were announced for Motubrain?",
+        "answer": "ShengShu reports a 63.77 EWM Score on WorldArena and RoboTwin 2.0 scores of 95.8 in the clean setting and 96.1 in the randomized setting. Treat these as source-attributed launch claims unless independent updates appear."
+      },
+      {
+        "question": "How is a World Action Model different from a normal world model?",
+        "answer": "A conventional world model often focuses on predicting how a scene may evolve. Motubrain's World Action Model framing adds action generation, so the model predicts the world while producing robot actions."
+      },
+      {
+        "question": "Why does Vidu appear in Motubrain coverage?",
+        "answer": "Vidu is ShengShu's video generation platform. ShengShu presents Motubrain as a robotics extension of world-model technology that grew from video simulation toward physical action."
+      }
+    ]
+  },
+  "footer": {
+    "id": "footer",
+    "brand": {
+      "title": "Motubrain.org",
+      "description": "Independent bilingual guide to Motubrain, the World Action Model for embodied AI. Not affiliated with ShengShu Technology.",
+      "logo": {
+        "src": "/motubrain-mark.svg",
+        "alt": "Motubrain.org"
+      },
+      "url": "/"
+    },
+    "nav": {
+      "items": [
+        {
+          "title": "Site",
+          "children": [
+            {
+              "title": "Features",
+              "url": "/#features",
+              "target": "_self"
+            },
+            {
+              "title": "FAQ",
+              "url": "/#faq",
+              "target": "_self"
+            }
+          ]
+        }
+      ]
+    },
+    "social": {
+      "items": [
+        {
+          "title": "Email",
+          "icon": "Mail",
+          "url": "mailto:support@motubrain.org",
+          "target": "_self"
+        }
+      ]
+    },
+    "agreement": {
+      "items": [
+        {
+          "title": "Privacy Policy",
+          "url": "/privacy-policy"
+        },
+        {
+          "title": "Terms of Service",
+          "url": "/terms-of-service"
+        }
+      ]
+    },
+    "show_theme": true,
+    "show_locale": true
+  }
+}
