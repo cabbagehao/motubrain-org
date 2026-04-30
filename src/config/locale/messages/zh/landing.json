@@ -12,16 +12,6 @@
     "nav": {
       "items": [
         {
-          "title": "核心事实",
-          "url": "/#facts",
-          "target": "_self"
-        },
-        {
-          "title": "架构",
-          "url": "/#architecture",
-          "target": "_self"
-        },
-        {
           "title": "FAQ",
           "url": "/#faq",
           "target": "_self"
@@ -315,16 +305,6 @@
         {
           "title": "浏览",
           "children": [
-            {
-              "title": "核心事实",
-              "url": "/#facts",
-              "target": "_self"
-            },
-            {
-              "title": "架构",
-              "url": "/#architecture",
-              "target": "_self"
-            },
             {
               "title": "FAQ",
               "url": "/#faq",

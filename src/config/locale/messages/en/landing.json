@@ -12,16 +12,6 @@
     "nav": {
       "items": [
         {
-          "title": "Facts",
-          "url": "/#facts",
-          "target": "_self"
-        },
-        {
-          "title": "Architecture",
-          "url": "/#architecture",
-          "target": "_self"
-        },
-        {
           "title": "FAQ",
           "url": "/#faq",
           "target": "_self"
