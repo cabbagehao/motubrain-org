@@ -11,6 +11,8 @@ const defaultLayoutLoaders: Record<string, ThemeModuleLoader> = {
 };
 
 const defaultBlockLoaders: Record<string, ThemeModuleLoader> = {
+  'benchmark-screenshots': () =>
+    import('@/themes/default/blocks/benchmark-screenshots'),
   blog: () => import('@/themes/default/blocks/blog'),
   'blog-detail': () => import('@/themes/default/blocks/blog-detail'),
   cta: () => import('@/themes/default/blocks/cta'),

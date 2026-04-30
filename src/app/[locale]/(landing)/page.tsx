@@ -17,9 +17,12 @@ export default async function LandingPage({
   const showSections = [
     'hero',
     'stats',
+    'benchmark_screenshots',
     'introduce',
     'benefits',
+    'technical_background',
     'usage',
+    'source_map',
     'features',
     'logos',
     'testimonials',

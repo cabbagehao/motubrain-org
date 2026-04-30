@@ -12,6 +12,16 @@
     "nav": {
       "items": [
         {
+          "title": "Sources",
+          "url": "/#source-map",
+          "target": "_self"
+        },
+        {
+          "title": "Background",
+          "url": "/#technical-background",
+          "target": "_self"
+        },
+        {
           "title": "FAQ",
           "url": "/#faq",
           "target": "_self"
@@ -156,6 +166,30 @@
       }
     ]
   },
+  "technical_background": {
+    "block": "features-step",
+    "id": "technical-background",
+    "title": "From video worlds to robot action",
+    "description": "Motubrain sits on a visible ShengShu research path: video-based embodied priors, unified latent actions, and a World Action Model for physical execution.",
+    "items": [
+      {
+        "title": "Vidar connects video priors to manipulation",
+        "description": "Vidar framed video diffusion as a scalable prior for robot manipulation, using multi-view trajectories and minimal demonstrations to adapt to new embodiments.",
+        "icon": "RiVideoLine"
+      },
+      {
+        "title": "Motus unifies five modeling modes",
+        "description": "Motus introduced a latent-action world model that can switch between VLA control, world modeling, inverse dynamics, video generation, and joint video-action prediction.",
+        "icon": "Layers"
+      },
+      {
+        "title": "Motubrain turns prediction into action",
+        "description": "Motubrain extends that direction into a World Action Model: one architecture for understanding scenes, anticipating change, and generating robot actions.",
+        "icon": "Brain"
+      }
+    ],
+    "className": "bg-muted"
+  },
   "usage": {
     "block": "features-step",
     "id": "sources",
@@ -194,6 +228,56 @@
       }
     ],
     "className": "bg-muted"
+  },
+  "source_map": {
+    "block": "features",
+    "id": "source-map",
+    "title": "Where to verify Motubrain information",
+    "description": "Use these primary and technical sources to separate official claims, benchmark context, related research, and current access status.",
+    "items": [
+      {
+        "title": "Official Motubrain page",
+        "description": "ShengShu's product page is the first stop for the stated model positioning, key capabilities, partner logos, and leaderboard claims.",
+        "icon": "ArrowUpRight",
+        "url": "https://www.shengshu.com/en/motubrain",
+        "target": "_blank"
+      },
+      {
+        "title": "Launch announcement",
+        "description": "The PRNewswire release adds the public launch date, architecture narrative, benchmark summary, deployment claims, partners, and Vidu connection.",
+        "icon": "Newspaper",
+        "url": "https://www.prnewswire.com/news-releases/shengshu-technology-unveils-world-action-model-motubrain-one-brain-infinite-possibilities-for-robotic-intelligence-302757280.html",
+        "target": "_blank"
+      },
+      {
+        "title": "WorldArena benchmark",
+        "description": "WorldArena explains EWMScore and how embodied world models are judged across video quality, functional utility, and action-planning roles.",
+        "icon": "RiBarChart2Line",
+        "url": "https://world-arena.ai/",
+        "target": "_blank"
+      },
+      {
+        "title": "RoboTwin 2.0 benchmark",
+        "description": "RoboTwin 2.0 documents the dual-arm manipulation setting, 50-task evaluation, five robot embodiments, and domain randomization context.",
+        "icon": "Activity",
+        "url": "https://robotwin-platform.github.io/",
+        "target": "_blank"
+      },
+      {
+        "title": "Motus research trail",
+        "description": "Motus is useful background for understanding latent actions, Mixture-of-Transformers, and the five-mode unified modeling idea behind the lineage.",
+        "icon": "GitBranch",
+        "url": "https://motus-robotics.github.io/motus",
+        "target": "_blank"
+      },
+      {
+        "title": "Access status",
+        "description": "Public materials currently describe Motubrain, but they do not show a self-serve API, downloadable model, or public demo hosted on this site.",
+        "icon": "ShieldCheck",
+        "url": "https://www.shengshu.com/en/motubrain",
+        "target": "_blank"
+      }
+    ]
   },
   "features": {
     "id": "features",
@@ -251,6 +335,38 @@
       }
     ],
     "className": "bg-muted"
+  },
+  "benchmark_screenshots": {
+    "block": "benchmark-screenshots",
+    "id": "benchmark-screenshots",
+    "title": "Motubrain appears at #1 on both benchmark tables",
+    "description": "These leaderboard screenshots make the reported RoboTwin 2.0 and WorldArena rankings easier to inspect at a glance.",
+    "items": [
+      {
+        "title": "RoboTwin 2.0 Leaderboard",
+        "description": "The official screenshot shows Motubrain at 95.8 in the Clean setting and 96.1 in the Randomized setting.",
+        "url": "https://robotwin-platform.github.io/leaderboard",
+        "target": "_blank",
+        "image": {
+          "src": "/motubrain/robotwin-leaderboard.jpg",
+          "alt": "RoboTwin 2.0 leaderboard screenshot showing Motubrain ranked first",
+          "width": 1152,
+          "height": 604
+        }
+      },
+      {
+        "title": "WorldArena Leaderboard",
+        "description": "The official screenshot shows Motubrain ranked first with a 63.77 EWMScore.",
+        "url": "https://huggingface.co/spaces/WorldArena/WorldArena",
+        "target": "_blank",
+        "image": {
+          "src": "/motubrain/worldarena-leaderboard.png",
+          "alt": "WorldArena leaderboard screenshot showing Motubrain ranked first",
+          "width": 1280,
+          "height": 724
+        }
+      }
+    ]
   },
   "testimonials": {
     "id": "testimonials",
@@ -311,9 +427,54 @@
               "target": "_self"
             },
             {
+              "title": "Sources",
+              "url": "/#source-map",
+              "target": "_self"
+            },
+            {
+              "title": "Background",
+              "url": "/#technical-background",
+              "target": "_self"
+            },
+            {
               "title": "FAQ",
               "url": "/#faq",
               "target": "_self"
+            }
+          ]
+        },
+        {
+          "title": "Sources",
+          "children": [
+            {
+              "title": "ShengShu Motubrain",
+              "url": "https://www.shengshu.com/en/motubrain",
+              "target": "_blank"
+            },
+            {
+              "title": "Launch announcement",
+              "url": "https://www.prnewswire.com/news-releases/shengshu-technology-unveils-world-action-model-motubrain-one-brain-infinite-possibilities-for-robotic-intelligence-302757280.html",
+              "target": "_blank"
+            },
+            {
+              "title": "WorldArena",
+              "url": "https://world-arena.ai/",
+              "target": "_blank"
+            },
+            {
+              "title": "RoboTwin 2.0",
+              "url": "https://robotwin-platform.github.io/",
+              "target": "_blank"
+            },
+            {
+              "title": "Motus",
+              "url": "https://motus-robotics.github.io/motus",
+              "target": "_blank"
+            },
+            {
+              "title": "Vidar",
+              "url": "https://arxiv.org/abs/2507.12898",
+              "target": "_blank"
             }
           ]
         }

@@ -35,7 +35,24 @@ export function Features({
               <div className="space-y-3" key={idx}>
                 <div className="flex items-center gap-2">
                   <SmartIcon name={item.icon as string} size={24} />
-                  <h3 className="text-sm font-medium">{item.title}</h3>
+                  <h3 className="text-sm font-medium">
+                    {item.url ? (
+                      <a
+                        href={item.url}
+                        target={item.target || '_blank'}
+                        rel={
+                          (item.target || '_blank') === '_blank'
+                            ? 'noreferrer'
+                            : undefined
+                        }
+                        className="hover:text-primary underline-offset-4 hover:underline"
+                      >
+                        {item.title}
+                      </a>
+                    ) : (
+                      item.title
+                    )}
+                  </h3>
                 </div>
                 <p className="text-sm">{item.description}</p>
               </div>

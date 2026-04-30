@@ -12,6 +12,16 @@
     "nav": {
       "items": [
         {
+          "title": "来源",
+          "url": "/#source-map",
+          "target": "_self"
+        },
+        {
+          "title": "背景",
+          "url": "/#technical-background",
+          "target": "_self"
+        },
+        {
           "title": "FAQ",
           "url": "/#faq",
           "target": "_self"
@@ -156,6 +166,30 @@
       }
     ]
   },
+  "technical_background": {
+    "block": "features-step",
+    "id": "technical-background",
+    "title": "从视频世界到机器人动作",
+    "description": "Motubrain 位于生数科技一条清晰的研究路径上：视频具身先验、统一潜在动作，再到面向物理执行的 World Action Model。",
+    "items": [
+      {
+        "title": "Vidar 把视频先验连接到机器人操作",
+        "description": "Vidar 将视频扩散模型作为机器人操作的可扩展先验，通过多视角轨迹和少量演示适配新的机器人本体。",
+        "icon": "RiVideoLine"
+      },
+      {
+        "title": "Motus 统一五种建模模式",
+        "description": "Motus 引入潜在动作世界模型，在 VLA 控制、世界建模、逆动力学、视频生成和视频-动作联合预测之间切换。",
+        "icon": "Layers"
+      },
+      {
+        "title": "Motubrain 把预测推进到行动",
+        "description": "Motubrain 将这条路线延伸为世界动作模型，用同一架构理解场景、预判变化，并生成机器人动作。",
+        "icon": "Brain"
+      }
+    ],
+    "className": "bg-muted"
+  },
   "usage": {
     "block": "features-step",
     "id": "sources",
@@ -194,6 +228,56 @@
       }
     ],
     "className": "bg-muted"
+  },
+  "source_map": {
+    "block": "features",
+    "id": "source-map",
+    "title": "去哪里核实 Motubrain 信息",
+    "description": "这些主要来源和技术资料可以帮助你区分官方声明、基准语境、相关研究和当前访问状态。",
+    "items": [
+      {
+        "title": "Motubrain 官方页面",
+        "description": "生数科技产品页是核对模型定位、核心能力、合作伙伴和排行榜声明的第一入口。",
+        "icon": "ArrowUpRight",
+        "url": "https://www.shengshu.com/en/motubrain",
+        "target": "_blank"
+      },
+      {
+        "title": "发布新闻稿",
+        "description": "PRNewswire 新闻稿补充了公开发布日期、架构叙述、基准摘要、部署声明、合作伙伴和 Vidu 关系。",
+        "icon": "Newspaper",
+        "url": "https://www.prnewswire.com/news-releases/shengshu-technology-unveils-world-action-model-motubrain-one-brain-infinite-possibilities-for-robotic-intelligence-302757280.html",
+        "target": "_blank"
+      },
+      {
+        "title": "WorldArena 基准",
+        "description": "WorldArena 解释 EWMScore，以及具身世界模型如何在视频质量、功能效用和动作规划角色中被评估。",
+        "icon": "RiBarChart2Line",
+        "url": "https://world-arena.ai/",
+        "target": "_blank"
+      },
+      {
+        "title": "RoboTwin 2.0 基准",
+        "description": "RoboTwin 2.0 说明双臂机器人操作场景、50 个任务、五种机器人本体和域随机化评测背景。",
+        "icon": "Activity",
+        "url": "https://robotwin-platform.github.io/",
+        "target": "_blank"
+      },
+      {
+        "title": "Motus 研究脉络",
+        "description": "Motus 有助于理解潜在动作、Mixture-of-Transformers，以及五种建模模式统一到一套框架中的思路。",
+        "icon": "GitBranch",
+        "url": "https://motus-robotics.github.io/motus",
+        "target": "_blank"
+      },
+      {
+        "title": "访问状态",
+        "description": "当前公开资料主要用于了解 Motubrain；本站没有提供自助 API、可下载模型或公开演示。",
+        "icon": "ShieldCheck",
+        "url": "https://www.shengshu.com/en/motubrain",
+        "target": "_blank"
+      }
+    ]
   },
   "features": {
     "id": "features",
@@ -252,6 +336,38 @@
     ],
     "className": "bg-muted"
   },
+  "benchmark_screenshots": {
+    "block": "benchmark-screenshots",
+    "id": "benchmark-screenshots",
+    "title": "Motubrain 在两个基准榜单中都位列第一",
+    "description": "以下截图便于直接查看 RoboTwin 2.0 和 WorldArena 榜单中的排名位置。",
+    "items": [
+      {
+        "title": "RoboTwin 2.0 榜单截图",
+        "description": "官方截图显示 Motubrain 在 Clean 设置下为 95.8，在 Randomized 设置下为 96.1。",
+        "url": "https://robotwin-platform.github.io/leaderboard",
+        "target": "_blank",
+        "image": {
+          "src": "/motubrain/robotwin-leaderboard.jpg",
+          "alt": "RoboTwin 2.0 榜单截图，显示 Motubrain 位列第一",
+          "width": 1152,
+          "height": 604
+        }
+      },
+      {
+        "title": "WorldArena 榜单截图",
+        "description": "官方截图显示 Motubrain 以 63.77 EWMScore 位列第一。",
+        "url": "https://huggingface.co/spaces/WorldArena/WorldArena",
+        "target": "_blank",
+        "image": {
+          "src": "/motubrain/worldarena-leaderboard.png",
+          "alt": "WorldArena 榜单截图，显示 Motubrain 位列第一",
+          "width": 1280,
+          "height": 724
+        }
+      }
+    ]
+  },
   "testimonials": {
     "id": "testimonials",
     "disabled": true,
@@ -309,6 +425,16 @@
               "title": "FAQ",
               "url": "/#faq",
               "target": "_self"
+            },
+            {
+              "title": "来源地图",
+              "url": "/#source-map",
+              "target": "_self"
+            },
+            {
+              "title": "技术背景",
+              "url": "/#technical-background",
+              "target": "_self"
             }
           ]
         },
@@ -327,7 +453,22 @@
             },
             {
               "title": "RoboTwin 2.0",
-              "url": "https://huggingface.co/docs/lerobot/main/robotwin",
+              "url": "https://robotwin-platform.github.io/",
+              "target": "_blank"
+            },
+            {
+              "title": "发布新闻稿",
+              "url": "https://www.prnewswire.com/news-releases/shengshu-technology-unveils-world-action-model-motubrain-one-brain-infinite-possibilities-for-robotic-intelligence-302757280.html",
+              "target": "_blank"
+            },
+            {
+              "title": "Motus",
+              "url": "https://motus-robotics.github.io/motus",
+              "target": "_blank"
+            },
+            {
+              "title": "Vidar",
+              "url": "https://arxiv.org/abs/2507.12898",
               "target": "_blank"
             }
           ]
