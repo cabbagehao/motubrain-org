@@ -9,6 +9,8 @@ import {
 } from '@/config/locale';
 import { getCanonicalUrl } from '@/shared/lib/seo';
 
+const sitemapLastModified = new Date('2026-06-22T00:00:00+00:00');
+
 function normalizeRoutePath(routePath: string) {
   if (!routePath || routePath === '/') {
     return '/';
@@ -110,5 +112,8 @@ export function buildSitemapEntriesForPaths({
 export function getSitemapEntries() {
   return buildSitemapEntriesForPaths({
     routePaths: getIndexablePagePaths(),
-  });
+  }).map((entry) => ({
+    ...entry,
+    lastModified: sitemapLastModified,
+  }));
 }
