@@ -59,6 +59,7 @@ export default async function LandingPage({
       typeof hero?.description === 'string' && hero.description.trim()
         ? hero.description
         : envConfigs.app_description,
+    faqItems: getFaqStructuredDataItems(sections.faq),
   });
 
   return (
@@ -76,10 +77,12 @@ function buildLandingPageStructuredData({
   locale,
   title,
   description,
+  faqItems,
 }: {
   locale: string;
   title: string;
   description: string;
+  faqItems: FaqStructuredDataItem[];
 }) {
   const siteUrl = envConfigs.app_url.replace(/\/+$/, '');
   const logoUrl = toAbsoluteUrl(envConfigs.app_logo);
@@ -119,8 +122,42 @@ function buildLandingPageStructuredData({
           '@id': `${siteUrl}/#organization`,
         },
       },
+      ...(faqItems.length > 0
+        ? [
+            {
+              '@type': 'FAQPage',
+              '@id': `${siteUrl}/#faq`,
+              mainEntity: faqItems.map((item) => ({
+                '@type': 'Question',
+                name: item.question,
+                acceptedAnswer: {
+                  '@type': 'Answer',
+                  text: item.answer,
+                },
+              })),
+            },
+          ]
+        : []),
     ],
   };
+}
+
+type FaqStructuredDataItem = {
+  question: string;
+  answer: string;
+};
+
+function getFaqStructuredDataItems(section: Section | undefined) {
+  if (!section || !Array.isArray(section.items)) {
+    return [];
+  }
+
+  return section.items
+    .map((item) => ({
+      question: typeof item.question === 'string' ? item.question.trim() : '',
+      answer: typeof item.answer === 'string' ? item.answer.trim() : '',
+    }))
+    .filter((item) => item.question && item.answer);
 }
 
 function toAbsoluteUrl(pathOrUrl: string) {
