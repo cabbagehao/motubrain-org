@@ -4,6 +4,8 @@ import { getThemePage } from '@/core/theme';
 import { envConfigs } from '@/config';
 import { DynamicPage, Section } from '@/shared/types/blocks/landing';
 
+const landingPageDateModified = '2026-06-23';
+
 export default async function LandingPage({
   params,
 }: {
@@ -107,6 +109,25 @@ function buildLandingPageStructuredData({
         inLanguage: locale,
         publisher: {
           '@id': `${siteUrl}/#organization`,
+        },
+      },
+      {
+        '@type': 'WebPage',
+        '@id': `${siteUrl}/#webpage`,
+        url: siteUrl,
+        name: title,
+        description,
+        inLanguage: locale,
+        dateModified: landingPageDateModified,
+        isPartOf: {
+          '@id': `${siteUrl}/#website`,
+        },
+        about: {
+          '@id': `${siteUrl}/#software`,
+        },
+        primaryImageOfPage: {
+          '@type': 'ImageObject',
+          url: previewImageUrl,
         },
       },
       {
