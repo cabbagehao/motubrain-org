@@ -1,8 +1,9 @@
 import { notFound, permanentRedirect } from 'next/navigation';
 import { getTranslations, setRequestLocale } from 'next-intl/server';
 
-import { defaultLocale, isEnglishOnlyPageSlug, locales } from '@/config/locale';
 import { getThemePage } from '@/core/theme';
+import { envConfigs } from '@/config';
+import { defaultLocale, isEnglishOnlyPageSlug, locales } from '@/config/locale';
 import {
   buildPageMetadata,
   getAlternateLanguageUrls,
@@ -53,7 +54,10 @@ export async function generateMetadata({
   }
 
   if (locale !== defaultLocale && isEnglishOnlyPageSlug(staticPageSlug)) {
-    const englishCanonical = getCanonicalUrl(`/${staticPageSlug}`, defaultLocale);
+    const englishCanonical = getCanonicalUrl(
+      `/${staticPageSlug}`,
+      defaultLocale
+    );
     return {
       alternates: {
         canonical: englishCanonical,
@@ -167,8 +171,23 @@ export default async function DynamicPage({
   // return static page
   if (staticPage) {
     const Page = await getThemePage('static-page');
+    const structuredData = buildStaticPageStructuredData({
+      locale,
+      title: staticPage.title || '',
+      description: staticPage.description || '',
+      canonicalUrl: getCanonicalUrl(`/${staticPageSlug}`, locale),
+      slug: staticPageSlug,
+    });
 
-    return <Page locale={locale} post={staticPage} />;
+    return (
+      <>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
+        />
+        <Page locale={locale} post={staticPage} />
+      </>
+    );
   }
 
   // 2. static page not found
@@ -195,4 +214,70 @@ export default async function DynamicPage({
 
   // 3. page not found
   return notFound();
+}
+
+function buildStaticPageStructuredData({
+  locale,
+  title,
+  description,
+  canonicalUrl,
+  slug,
+}: {
+  locale: string;
+  title: string;
+  description: string;
+  canonicalUrl: string;
+  slug: string;
+}) {
+  const siteUrl = envConfigs.app_url.replace(/\/+$/, '');
+
+  return {
+    '@context': 'https://schema.org',
+    '@graph': [
+      {
+        '@type': 'Organization',
+        '@id': `${siteUrl}/#organization`,
+        name: envConfigs.app_name,
+        url: siteUrl,
+      },
+      {
+        '@type': 'WebSite',
+        '@id': `${siteUrl}/#website`,
+        name: envConfigs.app_name,
+        url: siteUrl,
+        publisher: {
+          '@id': `${siteUrl}/#organization`,
+        },
+      },
+      {
+        '@type': ['WebPage', 'Article'],
+        '@id': `${canonicalUrl}#webpage`,
+        url: canonicalUrl,
+        name: title,
+        headline: title,
+        description,
+        inLanguage: locale,
+        dateModified: '2026-06-23',
+        isPartOf: {
+          '@id': `${siteUrl}/#website`,
+        },
+        publisher: {
+          '@id': `${siteUrl}/#organization`,
+        },
+        about: [
+          {
+            '@type': 'Thing',
+            name: 'Motubrain',
+          },
+          {
+            '@type': 'Thing',
+            name:
+              slug === 'benchmarks'
+                ? 'Embodied AI benchmarks'
+                : 'World Action Model',
+          },
+        ],
+      },
+    ],
+  };
 }

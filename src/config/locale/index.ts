@@ -16,8 +16,10 @@ export const localePrefix = 'as-needed';
 export const localeDetection = false;
 
 export const englishOnlyPageSlugs = [
+  'benchmarks',
   'privacy-policy',
   'terms-of-service',
+  'world-action-model',
 ] as const;
 
 export function isEnglishOnlyPageSlug(slugPath: string) {

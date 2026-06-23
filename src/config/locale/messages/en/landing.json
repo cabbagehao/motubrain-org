@@ -17,6 +17,16 @@
           "target": "_self"
         },
         {
+          "title": "WAM Guide",
+          "url": "/world-action-model",
+          "target": "_self"
+        },
+        {
+          "title": "Benchmarks",
+          "url": "/benchmarks",
+          "target": "_self"
+        },
+        {
           "title": "Background",
           "url": "/#technical-background",
           "target": "_self"
@@ -429,6 +439,16 @@
             {
               "title": "Sources",
               "url": "/#source-map",
+              "target": "_self"
+            },
+            {
+              "title": "World Action Model Guide",
+              "url": "/world-action-model",
+              "target": "_self"
+            },
+            {
+              "title": "Benchmark Guide",
+              "url": "/benchmarks",
               "target": "_self"
             },
             {

@@ -17,6 +17,16 @@
           "target": "_self"
         },
         {
+          "title": "WAM 指南",
+          "url": "/world-action-model",
+          "target": "_self"
+        },
+        {
+          "title": "基准指南",
+          "url": "/benchmarks",
+          "target": "_self"
+        },
+        {
           "title": "背景",
           "url": "/#technical-background",
           "target": "_self"
@@ -429,6 +439,16 @@
             {
               "title": "来源地图",
               "url": "/#source-map",
+              "target": "_self"
+            },
+            {
+              "title": "World Action Model 指南",
+              "url": "/world-action-model",
+              "target": "_self"
+            },
+            {
+              "title": "基准指南",
+              "url": "/benchmarks",
               "target": "_self"
             },
             {

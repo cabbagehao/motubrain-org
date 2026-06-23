@@ -1,0 +1,59 @@
+---
+title: "Motubrain benchmarks: WorldArena and RoboTwin 2.0 source guide"
+description: "Source-attributed guide to Motubrain benchmark claims, including WorldArena EWMScore and RoboTwin 2.0 dual-arm manipulation context."
+created_at: 2026-06-23
+---
+
+## Summary
+
+Motubrain benchmark coverage currently centers on two sources: WorldArena for embodied world model evaluation and RoboTwin 2.0 for bimanual robotic manipulation. ShengShu Technology's April 29, 2026 launch announcement reports a 63.77 EWM Score on WorldArena and an average RoboTwin 2.0 score of 96.0 across 50 predetermined tasks, with randomized-environment performance above 95.0.
+
+Those figures are reported here as source-attributed claims. Motubrain.org has not independently rerun the benchmarks.
+
+## Benchmark Snapshot
+
+| Benchmark    | What it evaluates                                                                                 | Source-attributed Motubrain claim                                                                                                  | How to read it                                                                                             |
+| ------------ | ------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------- |
+| WorldArena   | Embodied world models across video quality and functional utility                                 | 63.77 EWM Score reported in the launch announcement                                                                                | A higher EWMScore indicates stronger aggregate performance under WorldArena's normalized metric.           |
+| RoboTwin 2.0 | Dual-arm robotic manipulation with synthetic data, domain randomization, and multiple embodiments | 96.0 average across 50 predetermined tasks, plus randomized-environment performance above 95.0 reported in the launch announcement | Scores should be read with the task set, simulator, robot embodiments, and randomization settings in mind. |
+
+![RoboTwin 2.0 leaderboard screenshot showing Motubrain ranked first](/motubrain/robotwin-leaderboard.jpg)
+
+![WorldArena leaderboard screenshot showing Motubrain ranked first](/motubrain/worldarena-leaderboard.png)
+
+## WorldArena Context
+
+WorldArena describes itself as a unified benchmark for evaluating embodied world models across perceptual and functional dimensions. Its evaluation covers video perception quality, embodied task functionality, and human evaluation. The project page says EWMScore is the arithmetic mean of 16 normalized base metrics, scaled from 0 to 100, where higher scores indicate stronger overall performance.
+
+For Motubrain, the important reading posture is conservative: the score is useful as a public claim and comparison point, but the benchmark methodology matters more than the rank alone. Review the WorldArena project page and leaderboard submission process before treating a score as a deployment guarantee.
+
+## RoboTwin 2.0 Context
+
+RoboTwin 2.0 is a scalable data generator and benchmark for robust bimanual robotic manipulation. The project describes a 50-task benchmark built on the RoboTwin Object Dataset, with 731 objects across 147 categories and support for five robot embodiments. The accompanying arXiv abstract also describes structured domain randomization across clutter, lighting, background, tabletop height, and language.
+
+That context matters because a manipulation benchmark is not just a single number. The score depends on task definitions, simulator setup, robot configuration, visual variation, language variation, and whether the model was evaluated in clean or randomized conditions.
+
+## What the Scores Do Not Prove
+
+The reported results do not by themselves prove that Motubrain is available as a public product, safe for unsupervised real-world robotics, or reproducible by outside teams. They also do not replace hardware-specific validation. A robotics team would still need to inspect access terms, integration requirements, test conditions, safety layers, and failure behavior.
+
+## Practical Checklist for Researchers
+
+1. Use the launch announcement for the exact Motubrain score claims and date.
+2. Use WorldArena to understand EWMScore, metric composition, and embodied functionality categories.
+3. Use RoboTwin 2.0 to understand the dual-arm benchmark, domain randomization, object library, and task suite.
+4. Distinguish leaderboard screenshots from reproducible evaluation artifacts.
+5. Track whether the official Motubrain page, code, papers, or benchmark hosts publish updated numbers.
+
+## Internal Reading Path
+
+- Read [What is a World Action Model?](/world-action-model) for WAM terminology.
+- Return to the [Motubrain homepage](/) for the broader source map.
+- Check the [privacy policy](/privacy-policy) and [terms of service](/terms-of-service) for site scope and independence.
+
+## Sources
+
+- [ShengShu Technology launch announcement on PRNewswire](https://www.prnewswire.com/news-releases/shengshu-technology-unveils-world-action-model-motubrain-one-brain-infinite-possibilities-for-robotic-intelligence-302757280.html)
+- [WorldArena project page](https://world-arena.ai/)
+- [RoboTwin 2.0 project page](https://robotwin-platform.github.io/)
+- [RoboTwin 2.0 arXiv paper](https://arxiv.org/abs/2506.18088)
