@@ -27,6 +27,11 @@
           "target": "_self"
         },
         {
+          "title": "Access",
+          "url": "/access-status",
+          "target": "_self"
+        },
+        {
           "title": "Background",
           "url": "/#technical-background",
           "target": "_self"
@@ -284,8 +289,8 @@
         "title": "Access status",
         "description": "Public materials currently describe Motubrain, but they do not show a self-serve API, downloadable model, or public demo hosted on this site.",
         "icon": "ShieldCheck",
-        "url": "https://www.shengshu.com/en/motubrain",
-        "target": "_blank"
+        "url": "/access-status",
+        "target": "_self"
       }
     ]
   },
@@ -449,6 +454,11 @@
             {
               "title": "Benchmark Guide",
               "url": "/benchmarks",
+              "target": "_self"
+            },
+            {
+              "title": "Access Status",
+              "url": "/access-status",
               "target": "_self"
             },
             {

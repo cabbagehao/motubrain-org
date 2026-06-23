@@ -1,0 +1,52 @@
+---
+title: Motubrain keyword map
+---
+
+## Purpose
+
+This is an internal planning artifact for backlog item mb-001. It maps existing Motubrain.org pages to search intent, target phrases, source evidence, and internal links. The docs source is configured in `source.config.ts`, but this repo does not expose public docs routes.
+
+## Current Route Inventory
+
+| Route                 | Page type           | Sitemap status                | Primary intent                               |
+| --------------------- | ------------------- | ----------------------------- | -------------------------------------------- |
+| `/`                   | Landing page        | Included, English and Chinese | Brand and overview discovery                 |
+| `/world-action-model` | Static content page | Included, English only        | Educational WAM explainer                    |
+| `/benchmarks`         | Static content page | Included, English only        | Benchmark/source validation                  |
+| `/access-status`      | Static content page | Included, English only        | API, demo, download, and access verification |
+| `/privacy-policy`     | Static content page | Included, English only        | Site policy and privacy scope                |
+| `/terms-of-service`   | Static content page | Included, English only        | Site scope, affiliation, and limitations     |
+
+## Keyword Matrix
+
+| Route                 | Primary keyword       | Secondary phrases                                                                                        | Search intent                                                                                         | Evidence available in repo                                                                                          | Internal link targets                                                       |
+| --------------------- | --------------------- | -------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------- |
+| `/`                   | motubrain             | MotuBrain, Motubrain.org, Motubrain World Action Model, ShengShu Motubrain, embodied AI model            | Understand what Motubrain is and find official sources                                                | Landing copy, source map, FAQ, footer disclosures, linked official sources                                          | `/world-action-model`, `/benchmarks`, `/access-status`, `/terms-of-service` |
+| `/world-action-model` | world action model    | WAM AI, embodied world model, robot world model, vision language action model, Motubrain architecture    | Learn the concept and distinguish WAM from nearby terms                                               | Page content cites PRNewswire, DreamZero, NVIDIA glossary, WorldArena, RoboTwin 2.0                                 | `/`, `/benchmarks`, `/access-status`                                        |
+| `/benchmarks`         | Motubrain benchmarks  | WorldArena EWMScore, RoboTwin 2.0 Motubrain, embodied AI benchmark, robot manipulation benchmark         | Validate reported scores and benchmark context                                                        | Page content cites PRNewswire, WorldArena, RoboTwin 2.0 project, RoboTwin arXiv; screenshots in `public/motubrain/` | `/`, `/world-action-model`, `/access-status`                                |
+| `/access-status`      | Motubrain API         | Motubrain demo, Motubrain download, Motubrain access, Motubrain official website, Motubrain availability | Determine whether this site offers API/demo/download access and where to verify official availability | Terms, privacy policy, homepage disclosure, official ShengShu and PRNewswire links                                  | `/`, `/world-action-model`, `/benchmarks`, `/terms-of-service`              |
+| `/terms-of-service`   | Motubrain.org terms   | Motubrain independent site, Motubrain API not provided, ShengShu affiliation                             | Confirm site scope and limitations                                                                    | Terms content explicitly states independence and no API/download/robot-control service                              | `/access-status`, `/privacy-policy`, `/`                                    |
+| `/privacy-policy`     | Motubrain.org privacy | Motubrain data collection, Motubrain account registration, Motubrain uploads                             | Confirm the site does not collect account/payment/upload data                                         | Privacy content states no account registration, paid features, uploads, or database-backed user area                | `/terms-of-service`, `/access-status`, `/`                                  |
+
+## Internal Link Recommendations
+
+| Source area              | Current status                                                      | Recommendation                                                                              |
+| ------------------------ | ------------------------------------------------------------------- | ------------------------------------------------------------------------------------------- |
+| Header navigation        | Links to sources, WAM guide, benchmarks, background, FAQ            | Add Access link to capture API/demo/download intent from every page shell.                  |
+| Footer site navigation   | Links to WAM guide, benchmarks, source map, policies                | Add Access Status near the editorial pages.                                                 |
+| Homepage source map      | Includes an access-status source card pointing to the official page | Link the card to `/access-status`, then let the status page send users to official sources. |
+| WAM and benchmarks pages | Each has an internal reading path                                   | Keep cross-links and add `/access-status` when editing those pages next.                    |
+| Policy pages             | Terms already supports no-service claims                            | Link access-status from terms only if a future policy refresh is already being made.        |
+
+## Claim Guardrails
+
+- Say Motubrain.org does not provide an API, demo, download, paid service, or ShengShu support.
+- Say public materials reviewed by this site do not show a self-serve API, downloadable model, or public demo when that statement is tied to the reviewed source set.
+- Do not say ShengShu will not provide access, that Motubrain is commercially available, or that benchmark claims are independently certified by Motubrain.org.
+- Keep scores source-attributed to ShengShu, official pages, benchmark hosts, or screenshots already stored in the repo.
+
+## Backlog Notes
+
+- mb-001: Keyword map artifact created with route-to-intent matrix, source evidence, and internal-link recommendations.
+- Follow-up candidate: Add Chinese static pages for `/world-action-model`, `/benchmarks`, and `/access-status` only when there is a translation maintenance plan.
+- Follow-up candidate: Re-run keyword density after deployment using focused keywords: `motubrain`, `world action model`, `Motubrain benchmarks`, and `Motubrain API`.

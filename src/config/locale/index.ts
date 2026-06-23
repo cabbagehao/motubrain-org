@@ -16,6 +16,7 @@ export const localePrefix = 'as-needed';
 export const localeDetection = false;
 
 export const englishOnlyPageSlugs = [
+  'access-status',
   'benchmarks',
   'privacy-policy',
   'terms-of-service',

@@ -27,6 +27,11 @@
           "target": "_self"
         },
         {
+          "title": "访问状态",
+          "url": "/access-status",
+          "target": "_self"
+        },
+        {
           "title": "背景",
           "url": "/#technical-background",
           "target": "_self"
@@ -284,8 +289,8 @@
         "title": "访问状态",
         "description": "当前公开资料主要用于了解 Motubrain；本站没有提供自助 API、可下载模型或公开演示。",
         "icon": "ShieldCheck",
-        "url": "https://www.shengshu.com/en/motubrain",
-        "target": "_blank"
+        "url": "/access-status",
+        "target": "_self"
       }
     ]
   },
@@ -449,6 +454,11 @@
             {
               "title": "基准指南",
               "url": "/benchmarks",
+              "target": "_self"
+            },
+            {
+              "title": "访问状态",
+              "url": "/access-status",
               "target": "_self"
             },
             {

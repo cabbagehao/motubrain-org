@@ -274,7 +274,9 @@ function buildStaticPageStructuredData({
             name:
               slug === 'benchmarks'
                 ? 'Embodied AI benchmarks'
-                : 'World Action Model',
+                : slug === 'access-status'
+                  ? 'Motubrain access status'
+                  : 'World Action Model',
           },
         ],
       },
