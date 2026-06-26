@@ -1,6 +1,6 @@
 ---
-title: "World Action Model: an educational guide to WAMs and Motubrain"
-description: "Learn what a World Action Model is, how WAMs relate video prediction to robot action, and how Motubrain is described in source-attributed public materials."
+title: 'World Action Model: an educational guide to WAMs and Motubrain'
+description: 'Learn what a World Action Model is, how WAMs relate video prediction to robot action, and how Motubrain is described in source-attributed public materials.'
 created_at: 2026-06-23
 ---
 
@@ -24,6 +24,16 @@ The WAM framing adds a stronger world-modeling component. NVIDIA's glossary desc
 | Vision-language-action model | Maps visual observations and language instructions to actions | Strong for instruction following, but may not explicitly model physical future states.   |
 | World Action Model           | Models future visual states and robot actions together        | Tries to make prediction and action generation part of one training and inference story. |
 
+## WAM, WorldArena, and RoboTwin in One Reading Path
+
+Searches for "world action model WAM" often mix three ideas: the model family, benchmark names, and Motubrain's reported launch scores. Read them in this order:
+
+1. WAM is the concept: a World Action Model connects future-state prediction with robot action.
+2. WorldArena is an embodied world model benchmark. The Motubrain launch announcement reports a 63.77 EWM Score there.
+3. RoboTwin 2.0 is a bimanual manipulation benchmark. The same launch announcement reports Motubrain scores for 50 predetermined tasks and randomized environments.
+
+Those benchmark claims are useful for orientation, but they should not be read as proof of public API access, model-weight availability, or safe real-world deployment. Use the [benchmarks guide](/benchmarks) for the score context and the [access status page](/access-status) for current API, demo, and download boundaries.
+
 ## How Motubrain Is Positioned
 
 ShengShu Technology's April 29, 2026 PRNewswire announcement describes Motubrain as a World Action Model that replaces multiple task-specific systems with a single unified robotic brain. The same release says Motubrain uses video and action as continuous modalities and gives one training process five capabilities: vision-language-action control, world modeling, video generation, inverse dynamics modeling, and joint video-action prediction.
@@ -44,10 +54,25 @@ This does not mean a WAM is automatically reliable in the physical world. Robots
 4. Ask whether the public material provides usable access, such as a paper, code, model weights, API, or demo.
 5. Prefer primary sources over reposted leaderboard screenshots.
 
+## FAQ
+
+### What does WAM mean in robotics AI?
+
+WAM usually means World Action Model. In this context, it describes a model that tries to learn future world states and the actions that can influence those states.
+
+### Is Motubrain the same thing as every World Action Model?
+
+No. Motubrain is a specific ShengShu Technology model described as a World Action Model. WAM is the broader concept or model family.
+
+### Do WorldArena or RoboTwin scores mean Motubrain is publicly downloadable?
+
+No. Benchmark scores and public access are separate questions. As of this page update, Motubrain.org has not found a public self-serve API, demo, or model download from the reviewed official sources.
+
 ## Internal Reading Path
 
 - Start with the [Motubrain homepage](/) for the source map and launch overview.
 - Use the [benchmarks page](/benchmarks) to understand WorldArena and RoboTwin 2.0 claims.
+- Check the [access status page](/access-status) before looking for a Motubrain API, demo, or download.
 - Review the [terms of service](/terms-of-service) for the site's independent, educational posture.
 
 ## Sources

@@ -9,7 +9,7 @@ import {
 } from '@/config/locale';
 import { getCanonicalUrl } from '@/shared/lib/seo';
 
-const sitemapLastModified = new Date('2026-06-23T00:00:00+00:00');
+const sitemapLastModified = new Date('2026-06-27T00:00:00+00:00');
 
 function normalizeRoutePath(routePath: string) {
   if (!routePath || routePath === '/') {
@@ -61,7 +61,9 @@ function getContentPagePaths() {
         continue;
       }
 
-      const relativePath = path.relative(pagesDir, fullPath).replace(/\\/g, '/');
+      const relativePath = path
+        .relative(pagesDir, fullPath)
+        .replace(/\\/g, '/');
       const withoutExtension = relativePath.replace(/\.(md|mdx)$/i, '');
       const withoutLocaleSuffix = withoutExtension.replace(/\.[a-z-]+$/i, '');
 
@@ -74,7 +76,11 @@ function getContentPagePaths() {
 
 export function getIndexablePagePaths() {
   const seen = new Set<string>();
-  const routePaths = ['/', ...getDynamicMessagePagePaths(), ...getContentPagePaths()];
+  const routePaths = [
+    '/',
+    ...getDynamicMessagePagePaths(),
+    ...getContentPagePaths(),
+  ];
 
   for (const routePath of routePaths) {
     seen.add(normalizeRoutePath(routePath));
