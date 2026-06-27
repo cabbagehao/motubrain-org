@@ -26,6 +26,17 @@ type SelectContentParams = {
   destination?: string;
 };
 
+type MotubrainProofEventParams = {
+  pageType?: string;
+  sourcePage?: string;
+  section?: string;
+  entryPoint?: string;
+  resourceId?: string;
+  destinationType?: string;
+  destinationHost?: string;
+  linkText?: string;
+};
+
 type PricingItemListParams = {
   item: PricingItem;
   itemListName?: string;
@@ -153,6 +164,48 @@ export function trackSelectContent({
     entry_point: normalizeText(entryPoint),
     destination: normalizeText(destination),
   });
+}
+
+function buildMotubrainProofParams({
+  pageType,
+  sourcePage,
+  section,
+  entryPoint,
+  resourceId,
+  destinationType,
+  destinationHost,
+  linkText,
+}: MotubrainProofEventParams) {
+  return {
+    page_type: normalizeText(pageType),
+    source_page: normalizeText(sourcePage),
+    section: normalizeText(section),
+    entry_point: normalizeText(entryPoint),
+    resource_id: normalizeText(resourceId),
+    destination_type: normalizeText(destinationType),
+    destination_host: normalizeText(destinationHost),
+    link_text: normalizeText(linkText),
+  };
+}
+
+export function trackSourceLinkClick(params: MotubrainProofEventParams) {
+  trackGaEvent('source_link_click', buildMotubrainProofParams(params));
+}
+
+export function trackBenchmarkView(params: MotubrainProofEventParams) {
+  trackGaEvent('benchmark_view', buildMotubrainProofParams(params));
+}
+
+export function trackBenchmarkTableView(params: MotubrainProofEventParams) {
+  trackGaEvent('benchmark_table_view', buildMotubrainProofParams(params));
+}
+
+export function trackAccessStatusClick(params: MotubrainProofEventParams) {
+  trackGaEvent('access_status_click', buildMotubrainProofParams(params));
+}
+
+export function trackResourceOutboundClick(params: MotubrainProofEventParams) {
+  trackGaEvent('resource_outbound_click', buildMotubrainProofParams(params));
 }
 
 export function trackSelectItem({

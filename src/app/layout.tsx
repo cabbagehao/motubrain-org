@@ -7,6 +7,7 @@ import NextTopLoader from 'nextjs-toploader';
 import { envConfigs } from '@/config';
 import { Ga4AiEventReporter } from '@/shared/blocks/common/ga4-ai-event-reporter';
 import { Ga4RouteEventReporter } from '@/shared/blocks/common/ga4-route-event-reporter';
+import { MotubrainProofEvents } from '@/shared/blocks/common/motubrain-proof-events';
 import { UtmCapture } from '@/shared/blocks/common/utm-capture';
 import { getAllConfigs } from '@/shared/models/config';
 import { getAdsService } from '@/shared/services/ads';
@@ -148,6 +149,7 @@ export default async function RootLayout({
         <UtmCapture />
         <Ga4RouteEventReporter />
         <Ga4AiEventReporter />
+        <MotubrainProofEvents />
 
         {/* inject ads body scripts */}
         {adsBodyScripts}

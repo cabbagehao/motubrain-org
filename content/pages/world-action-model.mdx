@@ -24,6 +24,17 @@ The WAM framing adds a stronger world-modeling component. NVIDIA's glossary desc
 | Vision-language-action model | Maps visual observations and language instructions to actions | Strong for instruction following, but may not explicitly model physical future states.   |
 | World Action Model           | Models future visual states and robot actions together        | Tries to make prediction and action generation part of one training and inference story. |
 
+## WAM vs VLA: Source-Bound Comparison
+
+The reviewed sources support a narrow comparison, not a universal taxonomy. A VLA model is usually discussed as a policy that maps visual inputs and language instructions to robot actions. A WAM is discussed here as adding an explicit future-state or world-modeling objective alongside action generation.
+
+| Question                                           | VLA reading                                          | WAM reading                                                                           | Status                                                |
+| -------------------------------------------------- | ---------------------------------------------------- | ------------------------------------------------------------------------------------- | ----------------------------------------------------- |
+| Does it output actions?                            | Yes, action prediction is central.                   | Yes, action prediction is central.                                                    | Source-backed at the concept level.                   |
+| Does it model future states?                       | Sometimes, but it is not always the named objective. | Future visual states and actions are described together in WAM sources.               | Source-bound; implementation details vary by paper.   |
+| Is Motubrain publicly available?                   | Not answered by VLA/WAM terminology.                 | Not answered by the WAM label or benchmark scores.                                    | Unknown from reviewed public sources.                 |
+| Does a benchmark score prove deployment readiness? | No. Benchmark context must be checked separately.    | No. WorldArena and RoboTwin claims still need task, metric, and reproduction context. | Source-backed caution, not an official certification. |
+
 ## WAM, WorldArena, and RoboTwin in One Reading Path
 
 Searches for "world action model WAM" often mix three ideas: the model family, benchmark names, and Motubrain's reported launch scores. Read them in this order:
@@ -39,6 +50,15 @@ Those benchmark claims are useful for orientation, but they should not be read a
 ShengShu Technology's April 29, 2026 PRNewswire announcement describes Motubrain as a World Action Model that replaces multiple task-specific systems with a single unified robotic brain. The same release says Motubrain uses video and action as continuous modalities and gives one training process five capabilities: vision-language-action control, world modeling, video generation, inverse dynamics modeling, and joint video-action prediction.
 
 Treat that as a source-attributed launch claim, not an independent certification by Motubrain.org. As of this page update, the public materials reviewed here explain the model and benchmark claims, but this site does not provide a Motubrain API, model download, public demo, or robot-control service.
+
+## Unknowns This Page Does Not Resolve
+
+| Unknown                                   | Why it remains unknown here                                                                            |
+| ----------------------------------------- | ------------------------------------------------------------------------------------------------------ |
+| Public API availability                   | The reviewed public sources do not show a self-serve Motubrain API hosted by Motubrain.org.            |
+| Model weights or downloadable checkpoints | The reviewed public sources do not provide a Motubrain.org model download.                             |
+| Independent benchmark reproduction        | The benchmark figures are reported as source-attributed claims unless a reproducible run is published. |
+| Hardware integration and safety behavior  | Public launch material and benchmark pages are not a substitute for robot-specific validation.         |
 
 ## Why Video Matters
 
