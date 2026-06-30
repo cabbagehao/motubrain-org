@@ -1,0 +1,107 @@
+{
+  "metadata": {
+    "title": "MCP Config Generator and JSON Debugger",
+    "description": "Browser-local MCP JSON config scratchpad with common mcpServers checks, security prompts, and setup boundaries for local AI developer tools."
+  },
+  "page": {
+    "title": "MCP Config Generator and JSON Debugger",
+    "sections": {
+      "tool": {
+        "id": "mcp-config-generator",
+        "block": "mcp-config-generator",
+        "eyebrow": "MCP config debugger",
+        "title": "Check an MCP JSON config before wiring it into your client",
+        "description": "Paste or adapt a local MCP config, validate JSON syntax, and review the common mcpServers shape before you add a server to Claude Code, Cursor, or another MCP-capable workspace.",
+        "source_boundary": "Motubrain.org is an independent utility page. It does not claim official MCP, Claude, Cursor, or server-specific authority; use it as a preflight checklist before checking the docs for the exact client and server you run.",
+        "checklist": [
+          "Keep the config as valid JSON: quoted keys, no comments, no trailing commas.",
+          "Prefer explicit server names so you can audit which tool can read which files or URLs.",
+          "Review command, args, env, and remote URL fields before trusting copied snippets.",
+          "Keep tokens, passwords, and API keys out of shared screenshots and pasted configs."
+        ]
+      },
+      "workflow": {
+        "id": "mcp-config-workflow",
+        "block": "features-step",
+        "title": "MCP config preflight sequence",
+        "description": "Use this compact pass before turning on a new local or remote MCP server.",
+        "items": [
+          {
+            "title": "Parse the JSON",
+            "description": "Fix syntax first. JSON config files usually reject comments, single quotes, and trailing commas even when a blog snippet looks close.",
+            "icon": "FileJson"
+          },
+          {
+            "title": "Check server shape",
+            "description": "Confirm the server entry has the launch method your client expects, commonly a local command with args or a remote URL.",
+            "icon": "Workflow"
+          },
+          {
+            "title": "Map access",
+            "description": "Write down what each server can read or execute: project folders, shell commands, browser access, databases, or remote APIs.",
+            "icon": "FolderSearch"
+          },
+          {
+            "title": "Confirm sources",
+            "description": "Open the package, repository, or vendor docs for every server before installing a copied command.",
+            "icon": "ShieldCheck"
+          }
+        ]
+      },
+      "boundaries": {
+        "id": "mcp-config-boundaries",
+        "block": "features",
+        "title": "What this MCP helper does and does not verify",
+        "description": "The page is intentionally conservative: it catches common config mistakes and points you back to primary sources.",
+        "items": [
+          {
+            "title": "JSON syntax and common shape",
+            "description": "The scratchpad checks whether the file parses and whether mcpServers entries look like usable server objects.",
+            "icon": "Braces"
+          },
+          {
+            "title": "Security review prompts",
+            "description": "Warnings call out remote URLs, secret-like values, env fields, and file access boundaries before you paste the config into a client.",
+            "icon": "ShieldAlert"
+          },
+          {
+            "title": "Not an official validator",
+            "description": "Exact fields, supported transports, and server options belong to your MCP client and each server's documentation.",
+            "icon": "BadgeAlert"
+          },
+          {
+            "title": "Local AI workspace context",
+            "description": "If you are building a broader self-hosted AI workspace, compare server permissions with the local app boundary.",
+            "icon": "MonitorCog",
+            "url": "/odysseus-ai",
+            "target": "_self"
+          }
+        ]
+      },
+      "faq": {
+        "id": "faq",
+        "block": "faq",
+        "title": "MCP config FAQ",
+        "description": "Practical boundaries for MCP JSON setup and debugging.",
+        "items": [
+          {
+            "question": "Is this an official MCP config generator?",
+            "answer": "No. It is an independent browser-local scratchpad for JSON syntax checks and common setup hygiene. Confirm final details in the documentation for your client and MCP server."
+          },
+          {
+            "question": "Does the tool upload my config?",
+            "answer": "No. The checks run in the browser component. Avoid pasting secrets anyway, because configs are often copied into tickets, chats, screenshots, or shared repos."
+          },
+          {
+            "question": "Why does the page warn about remote URLs?",
+            "answer": "A remote MCP server can change the trust boundary. Confirm TLS, authentication, logging, and what data the server can access before enabling it."
+          },
+          {
+            "question": "Can this verify Claude Code or Cursor-specific behavior?",
+            "answer": "It can catch common JSON mistakes, but it does not replace client-specific docs or runtime testing. Client-specific field support may differ."
+          }
+        ]
+      }
+    }
+  }
+}

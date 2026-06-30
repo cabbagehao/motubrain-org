@@ -24,6 +24,7 @@ test('english-only legal pages stay centralized in locale config', () => {
     'opencore-legacy-patcher-wifi-bluetooth',
     'opencore-legacy-patcher-non-metal-gpu',
     'mrpack-to-zip',
+    'mcp-config-generator',
     'odysseus-ai',
   ]);
 

@@ -26,6 +26,7 @@ test('default template sitemap includes the homepage and legal pages', () => {
     '/macbookpro11-1-opencore-legacy-patcher',
     '/macos-sequoia-unsupported-mac',
     '/macos-sonoma-unsupported-mac',
+    '/mcp-config-generator',
     '/mrpack-to-zip',
     '/odysseus-ai',
     '/opencore-legacy-patcher-compatibility',

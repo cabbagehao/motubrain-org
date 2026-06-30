@@ -30,6 +30,8 @@ const defaultBlockLoaders: Record<string, ThemeModuleLoader> = {
   header: () => import('@/themes/default/blocks/header'),
   hero: () => import('@/themes/default/blocks/hero'),
   logos: () => import('@/themes/default/blocks/logos'),
+  'mcp-config-generator': () =>
+    import('@/themes/default/blocks/mcp-config-generator'),
   'mrpack-to-zip-tool': () =>
     import('@/themes/default/blocks/mrpack-to-zip-tool'),
   'odysseus-ai-guide': () =>

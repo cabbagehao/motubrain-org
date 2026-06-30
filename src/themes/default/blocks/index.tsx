@@ -27,5 +27,6 @@ export * from './blog';
 export * from './blog-detail';
 export * from './page-detail';
 export * from './oclp-checker';
+export * from './mcp-config-generator';
 export * from './mrpack-to-zip-tool';
 export * from './odysseus-ai-guide';

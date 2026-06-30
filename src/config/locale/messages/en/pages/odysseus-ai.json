@@ -67,7 +67,7 @@
           },
           {
             "title": "Compare alternatives",
-            "description": "If your goal is only local chat or RAG, compare Odysseus with narrower options such as Open WebUI, AnythingLLM, or Pinokio workflows.",
+            "description": "If your goal is only local chat, RAG, or tool wiring, compare Odysseus with narrower options such as Open WebUI, AnythingLLM, Pinokio workflows, or an MCP-first editor setup.",
             "icon": "GitCompare"
           }
         ]
@@ -92,6 +92,13 @@
             "title": "You need privacy-aware control",
             "description": "Local-first tools can reduce third-party exposure, but only if you configure models, storage, and network access carefully.",
             "icon": "Lock"
+          },
+          {
+            "title": "You are wiring local tools through MCP",
+            "description": "Use the MCP config scratchpad when your local AI workspace depends on file, browser, database, or shell-connected MCP servers.",
+            "icon": "Workflow",
+            "url": "/mcp-config-generator",
+            "target": "_self"
           }
         ]
       },

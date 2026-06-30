@@ -37,6 +37,13 @@ type MotubrainProofEventParams = {
   linkText?: string;
 };
 
+type McpConfigEventParams = {
+  action: 'load_example' | 'validate_json' | 'copy_example';
+  status?: 'valid' | 'warning' | 'invalid';
+  issueCount?: number;
+  section?: string;
+};
+
 type PricingItemListParams = {
   item: PricingItem;
   itemListName?: string;
@@ -206,6 +213,20 @@ export function trackAccessStatusClick(params: MotubrainProofEventParams) {
 
 export function trackResourceOutboundClick(params: MotubrainProofEventParams) {
   trackGaEvent('resource_outbound_click', buildMotubrainProofParams(params));
+}
+
+export function trackMcpConfigEvent({
+  action,
+  status,
+  issueCount,
+  section,
+}: McpConfigEventParams) {
+  trackGaEvent('mcp_config_tool_action', {
+    action: normalizeText(action),
+    status: normalizeText(status),
+    issue_count: issueCount,
+    section: normalizeText(section),
+  });
 }
 
 export function trackSelectItem({

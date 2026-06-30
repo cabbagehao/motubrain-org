@@ -12,6 +12,11 @@
     "nav": {
       "items": [
         {
+          "title": "MCP Config",
+          "url": "/mcp-config-generator",
+          "target": "_self"
+        },
+        {
           "title": "Sources",
           "url": "/#source-map",
           "target": "_self"
@@ -436,6 +441,16 @@
         {
           "title": "Site",
           "children": [
+            {
+              "title": "MCP Config Generator",
+              "url": "/mcp-config-generator",
+              "target": "_self"
+            },
+            {
+              "title": "Odysseus AI Guide",
+              "url": "/odysseus-ai",
+              "target": "_self"
+            },
             {
               "title": "Features",
               "url": "/#features",

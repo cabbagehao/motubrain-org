@@ -30,6 +30,7 @@ export const englishOnlyPageSlugs = [
   'opencore-legacy-patcher-wifi-bluetooth',
   'opencore-legacy-patcher-non-metal-gpu',
   'mrpack-to-zip',
+  'mcp-config-generator',
   'odysseus-ai',
 ] as const;
 
@@ -71,6 +72,7 @@ export const localeMessagesPaths = [
   'pages/opencore-legacy-patcher-wifi-bluetooth',
   'pages/opencore-legacy-patcher-non-metal-gpu',
   'pages/mrpack-to-zip',
+  'pages/mcp-config-generator',
   'pages/odysseus-ai',
   'settings/sidebar',
   'settings/profile',
