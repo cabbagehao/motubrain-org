@@ -27,6 +27,7 @@ test('default template sitemap includes the homepage and legal pages', () => {
     '/macos-sequoia-unsupported-mac',
     '/macos-sonoma-unsupported-mac',
     '/mrpack-to-zip',
+    '/odysseus-ai',
     '/opencore-legacy-patcher-compatibility',
     '/opencore-legacy-patcher-error',
     '/opencore-legacy-patcher-non-metal-gpu',

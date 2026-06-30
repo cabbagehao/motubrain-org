@@ -32,6 +32,8 @@ const defaultBlockLoaders: Record<string, ThemeModuleLoader> = {
   logos: () => import('@/themes/default/blocks/logos'),
   'mrpack-to-zip-tool': () =>
     import('@/themes/default/blocks/mrpack-to-zip-tool'),
+  'odysseus-ai-guide': () =>
+    import('@/themes/default/blocks/odysseus-ai-guide'),
   'oclp-checker': () => import('@/themes/default/blocks/oclp-checker'),
   'page-detail': () => import('@/themes/default/blocks/page-detail'),
   pricing: () => import('@/themes/default/blocks/pricing'),

@@ -1,0 +1,124 @@
+{
+  "metadata": {
+    "title": "Odysseus AI: Self-Hosted AI Workspace Guide",
+    "description": "Independent Odysseus AI guide with official links, setup boundaries, and local AI workspace comparison notes."
+  },
+  "page": {
+    "title": "Odysseus AI: Self-Hosted AI Workspace Guide",
+    "sections": {
+      "hero": {
+        "id": "odysseus-ai",
+        "block": "odysseus-ai-guide",
+        "eyebrow": "Odysseus AI guide",
+        "title": "Check Odysseus AI before running a self-hosted workspace",
+        "description": "Odysseus is drawing attention as a self-hosted AI workspace. Use this independent guide to open the official project, read setup notes, and understand the practical checks before exposing local AI tools.",
+        "warnings": [
+          "This page does not mirror downloads or replace the official repository.",
+          "Review authentication, ports, private data, and model/API configuration before running any local AI workspace.",
+          "Treat third-party installers and community guides as convenience layers, not as primary sources."
+        ],
+        "sources": [
+          {
+            "title": "Official Odysseus project page",
+            "description": "Start with the live project page before following any third-party setup instructions.",
+            "url": "https://pewdiepie-archdaemon.github.io/odysseus/",
+            "kind": "official"
+          },
+          {
+            "title": "Odysseus GitHub repository",
+            "description": "Read the source repository, issues, and current branch state before installing.",
+            "url": "https://github.com/pewdiepie-archdaemon/odysseus",
+            "kind": "repo"
+          },
+          {
+            "title": "Setup documentation",
+            "description": "Use the repository setup docs as the primary setup reference.",
+            "url": "https://github.com/pewdiepie-archdaemon/odysseus/blob/dev/docs/setup.md",
+            "kind": "docs"
+          },
+          {
+            "title": "Hacker News discussion",
+            "description": "Scan community questions and caveats before choosing a self-hosted workflow.",
+            "url": "https://news.ycombinator.com/item?id=48346693",
+            "kind": "discussion"
+          }
+        ]
+      },
+      "workflow": {
+        "id": "odysseus-ai-workflow",
+        "block": "features-step",
+        "title": "Odysseus AI validation checklist",
+        "description": "Use this sequence before deciding whether Odysseus belongs in your local AI stack.",
+        "items": [
+          {
+            "title": "Confirm the source",
+            "description": "Open the official site and repository first. Avoid copied installers, mirrored files, or pages that hide the original source.",
+            "icon": "Github"
+          },
+          {
+            "title": "Map the workspace role",
+            "description": "Decide whether you need chat, local agents, model routing, research tools, mail, or a broader workspace before installing.",
+            "icon": "Workflow"
+          },
+          {
+            "title": "Check local exposure",
+            "description": "Review ports, authentication, private data paths, and network access before running a self-hosted AI app.",
+            "icon": "ShieldAlert"
+          },
+          {
+            "title": "Compare alternatives",
+            "description": "If your goal is only local chat or RAG, compare Odysseus with narrower options such as Open WebUI, AnythingLLM, or Pinokio workflows.",
+            "icon": "GitCompare"
+          }
+        ]
+      },
+      "comparison": {
+        "id": "odysseus-ai-comparison",
+        "block": "features",
+        "title": "When Odysseus AI may be worth testing",
+        "description": "The strongest fit is a local-first AI workspace, not a one-click chatbot replacement.",
+        "items": [
+          {
+            "title": "You want a workspace, not only chat",
+            "description": "Odysseus is interesting when your workflow needs multiple tools and local workspace structure around AI tasks.",
+            "icon": "PanelTop"
+          },
+          {
+            "title": "You can inspect source and setup",
+            "description": "Self-hosted AI tools should be reviewed like infrastructure. Read the repository and setup instructions before running them.",
+            "icon": "BookOpenText"
+          },
+          {
+            "title": "You need privacy-aware control",
+            "description": "Local-first tools can reduce third-party exposure, but only if you configure models, storage, and network access carefully.",
+            "icon": "Lock"
+          }
+        ]
+      },
+      "faq": {
+        "id": "faq",
+        "block": "faq",
+        "title": "Odysseus AI FAQ",
+        "description": "Independent notes for searchers comparing Odysseus with local AI workspace tools.",
+        "items": [
+          {
+            "question": "Is Motubrain.org the official Odysseus AI website?",
+            "answer": "No. This is an independent guide. Use the official Odysseus project page and GitHub repository for primary information."
+          },
+          {
+            "question": "Does this page host an Odysseus download?",
+            "answer": "No. Motubrain.org does not mirror downloads. The source links point to the official project and repository."
+          },
+          {
+            "question": "Is Odysseus AI the same as Open WebUI or AnythingLLM?",
+            "answer": "No. They may overlap around local AI workflows, but each project has different scope, setup, and assumptions. Compare the official docs before choosing one."
+          },
+          {
+            "question": "What should I check before self-hosting an AI workspace?",
+            "answer": "Check source authenticity, current setup docs, exposed ports, authentication, model/API configuration, storage paths, and whether private data leaves your machine."
+          }
+        ]
+      }
+    }
+  }
+}

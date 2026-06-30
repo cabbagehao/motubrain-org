@@ -30,6 +30,7 @@ export const englishOnlyPageSlugs = [
   'opencore-legacy-patcher-wifi-bluetooth',
   'opencore-legacy-patcher-non-metal-gpu',
   'mrpack-to-zip',
+  'odysseus-ai',
 ] as const;
 
 export function isEnglishOnlyPageSlug(slugPath: string) {
@@ -70,6 +71,7 @@ export const localeMessagesPaths = [
   'pages/opencore-legacy-patcher-wifi-bluetooth',
   'pages/opencore-legacy-patcher-non-metal-gpu',
   'pages/mrpack-to-zip',
+  'pages/odysseus-ai',
   'settings/sidebar',
   'settings/profile',
   'settings/security',
