@@ -20,7 +20,19 @@ test('default template sitemap is generated from the app router instead of a sta
 test('default template sitemap includes the homepage and legal pages', () => {
   assert.deepEqual(getIndexablePagePaths(), [
     '/',
+    '/access-status',
+    '/benchmarks',
+    '/imac14-2-opencore-legacy-patcher',
+    '/macbookpro11-1-opencore-legacy-patcher',
+    '/macos-sequoia-unsupported-mac',
+    '/macos-sonoma-unsupported-mac',
+    '/mrpack-to-zip',
+    '/opencore-legacy-patcher-compatibility',
+    '/opencore-legacy-patcher-error',
+    '/opencore-legacy-patcher-non-metal-gpu',
+    '/opencore-legacy-patcher-wifi-bluetooth',
     '/privacy-policy',
     '/terms-of-service',
+    '/world-action-model',
   ]);
 });

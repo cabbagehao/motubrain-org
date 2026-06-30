@@ -1,0 +1,73 @@
+{
+  "metadata": {
+    "title": "macOS Sonoma on Unsupported Mac: OCLP Compatibility Notes",
+    "description": "Check model and hardware caveats before planning macOS Sonoma on an unsupported Mac with OpenCore Legacy Patcher."
+  },
+  "page": {
+    "title": "macOS Sonoma on Unsupported Mac",
+    "sections": {
+      "checker": {
+        "id": "macos-sonoma-unsupported-mac",
+        "block": "oclp-checker",
+        "eyebrow": "Sonoma planning",
+        "title": "Check a Mac before trying macOS Sonoma with OCLP",
+        "description": "Use this independent checker as a starting point, then verify official model support and known hardware issues.",
+        "defaultModel": "iMac14,2",
+        "sources": [
+          {
+            "title": "Dortania Supported Models",
+            "url": "https://dortania.github.io/OpenCore-Legacy-Patcher/MODELS.html"
+          },
+          {
+            "title": "OCLP troubleshooting",
+            "url": "https://dortania.github.io/OpenCore-Legacy-Patcher/TROUBLESHOOTING.html"
+          }
+        ]
+      },
+      "workflow": {
+        "id": "sonoma-workflow",
+        "block": "features-step",
+        "title": "Sonoma planning checklist",
+        "description": "Confirm whether Sonoma is the right target before touching a production Mac.",
+        "items": [
+          {
+            "title": "Confirm model identifier",
+            "description": "Marketing names are not enough; use the model identifier from System Information.",
+            "icon": "Search"
+          },
+          {
+            "title": "Read wireless caveats",
+            "description": "Wi-Fi and Bluetooth can be a deciding factor on older hardware.",
+            "icon": "Wifi"
+          },
+          {
+            "title": "Review root patches",
+            "description": "Some features depend on post-install root patches and current OCLP support.",
+            "icon": "Wrench"
+          },
+          {
+            "title": "Plan a rollback",
+            "description": "Keep a backup and a recovery path before upgrading.",
+            "icon": "RotateCcw"
+          }
+        ]
+      },
+      "faq": {
+        "id": "faq",
+        "block": "faq",
+        "title": "macOS Sonoma OCLP FAQ",
+        "description": "Short answers for Sonoma compatibility planning.",
+        "items": [
+          {
+            "question": "Is Sonoma safer than Sequoia on every unsupported Mac?",
+            "answer": "Not necessarily. It depends on the model, GPU, wireless card, and current OCLP support."
+          },
+          {
+            "question": "Can this page confirm a successful install?",
+            "answer": "No. It can only help you plan questions to verify in official documentation."
+          }
+        ]
+      }
+    }
+  }
+}

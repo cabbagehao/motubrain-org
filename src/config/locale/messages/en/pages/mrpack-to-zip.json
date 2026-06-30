@@ -1,0 +1,61 @@
+{
+  "metadata": {
+    "title": "MRPack to ZIP Converter",
+    "description": "Convert a .mrpack file to a .zip copy locally in your browser for tools that expect a ZIP archive extension."
+  },
+  "page": {
+    "title": "MRPack to ZIP Converter",
+    "sections": {
+      "tool": {
+        "id": "mrpack-to-zip",
+        "block": "mrpack-to-zip-tool",
+        "eyebrow": "Modpack utility",
+        "title": "Convert .mrpack to .zip locally",
+        "description": "A Modrinth .mrpack file is ZIP-based. This browser-local utility creates a .zip copy without uploading the file."
+      },
+      "workflow": {
+        "id": "mrpack-workflow",
+        "block": "features-step",
+        "title": "When a ZIP copy helps",
+        "description": "Use this only when a tool can read the archive but rejects the .mrpack extension.",
+        "items": [
+          {
+            "title": "Keep the original",
+            "description": "Do not delete the .mrpack file. Some launchers need the original extension and metadata.",
+            "icon": "Archive"
+          },
+          {
+            "title": "Convert locally",
+            "description": "The browser creates a ZIP copy using the same file bytes.",
+            "icon": "FileArchive"
+          },
+          {
+            "title": "Validate compatibility",
+            "description": "A ZIP extension does not guarantee another launcher can install the modpack correctly.",
+            "icon": "ShieldCheck"
+          }
+        ]
+      },
+      "faq": {
+        "id": "faq",
+        "block": "faq",
+        "title": "MRPack to ZIP FAQ",
+        "description": "Limits of MRPack conversion.",
+        "items": [
+          {
+            "question": "Is a .mrpack file really a ZIP archive?",
+            "answer": "The format is ZIP-based, but the modpack metadata still matters for launcher compatibility."
+          },
+          {
+            "question": "Does this tool download mods or validate the pack?",
+            "answer": "No. It only creates a local ZIP copy and does not fetch external files."
+          },
+          {
+            "question": "Is my modpack uploaded?",
+            "answer": "No. The conversion runs in the browser session."
+          }
+        ]
+      }
+    }
+  }
+}

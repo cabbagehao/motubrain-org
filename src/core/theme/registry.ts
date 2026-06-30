@@ -30,6 +30,9 @@ const defaultBlockLoaders: Record<string, ThemeModuleLoader> = {
   header: () => import('@/themes/default/blocks/header'),
   hero: () => import('@/themes/default/blocks/hero'),
   logos: () => import('@/themes/default/blocks/logos'),
+  'mrpack-to-zip-tool': () =>
+    import('@/themes/default/blocks/mrpack-to-zip-tool'),
+  'oclp-checker': () => import('@/themes/default/blocks/oclp-checker'),
   'page-detail': () => import('@/themes/default/blocks/page-detail'),
   pricing: () => import('@/themes/default/blocks/pricing'),
   showcases: () => import('@/themes/default/blocks/showcases'),

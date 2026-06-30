@@ -1,0 +1,73 @@
+{
+  "metadata": {
+    "title": "macOS Sequoia on Unsupported Mac: OCLP Planning Guide",
+    "description": "Plan a macOS Sequoia unsupported Mac upgrade with OCLP caveats, model checks, and official source links."
+  },
+  "page": {
+    "title": "macOS Sequoia on Unsupported Mac",
+    "sections": {
+      "checker": {
+        "id": "macos-sequoia-unsupported-mac",
+        "block": "oclp-checker",
+        "eyebrow": "Sequoia planning",
+        "title": "Check a Mac before trying macOS Sequoia with OCLP",
+        "description": "Sequoia planning should start with exact model support, graphics and wireless caveats, and the latest OCLP release notes.",
+        "defaultModel": "MacBookAir7,2",
+        "sources": [
+          {
+            "title": "Dortania Supported Models",
+            "url": "https://dortania.github.io/OpenCore-Legacy-Patcher/MODELS.html"
+          },
+          {
+            "title": "OCLP troubleshooting",
+            "url": "https://dortania.github.io/OpenCore-Legacy-Patcher/TROUBLESHOOTING.html"
+          }
+        ]
+      },
+      "workflow": {
+        "id": "sequoia-workflow",
+        "block": "features-step",
+        "title": "Before planning Sequoia",
+        "description": "Newer macOS versions can expose older hardware limits more sharply.",
+        "items": [
+          {
+            "title": "Verify the model",
+            "description": "Search the exact model identifier in the official supported models page.",
+            "icon": "Search"
+          },
+          {
+            "title": "Check graphics support",
+            "description": "Non-Metal or older GPU setups can require special caution.",
+            "icon": "MonitorCog"
+          },
+          {
+            "title": "Check wireless risk",
+            "description": "Wi-Fi and Bluetooth behavior can differ by card and patch status.",
+            "icon": "Wifi"
+          },
+          {
+            "title": "Use official release notes",
+            "description": "Do not rely on old forum posts for the current Sequoia/OCLP combination.",
+            "icon": "FileClock"
+          }
+        ]
+      },
+      "faq": {
+        "id": "faq",
+        "block": "faq",
+        "title": "macOS Sequoia OCLP FAQ",
+        "description": "Common limits for unsupported Mac planning.",
+        "items": [
+          {
+            "question": "Should every unsupported Mac upgrade to Sequoia?",
+            "answer": "No. Some users should stay on an older macOS if graphics, wireless, or performance caveats matter."
+          },
+          {
+            "question": "Is this a Sequoia installer guide?",
+            "answer": "No. It is a compatibility planning page and links users back to official OCLP documentation."
+          }
+        ]
+      }
+    }
+  }
+}

@@ -1,0 +1,45 @@
+{
+  "metadata": {
+    "title": "OpenCore Legacy Patcher Wi-Fi and Bluetooth Notes",
+    "description": "Plan OCLP Wi-Fi and Bluetooth troubleshooting by checking model, wireless hardware, root patches, and official docs."
+  },
+  "page": {
+    "title": "OpenCore Legacy Patcher Wi-Fi and Bluetooth",
+    "sections": {
+      "checker": {
+        "id": "opencore-legacy-patcher-wifi-bluetooth",
+        "block": "oclp-checker",
+        "eyebrow": "Wireless caveats",
+        "title": "Check wireless risk before an OCLP upgrade",
+        "description": "Wi-Fi and Bluetooth behavior can vary by Mac model, card generation, macOS version, and post-install patch status.",
+        "defaultModel": "MacPro5,1",
+        "sources": [
+          {
+            "title": "OCLP troubleshooting",
+            "url": "https://dortania.github.io/OpenCore-Legacy-Patcher/TROUBLESHOOTING.html"
+          },
+          {
+            "title": "Dortania Supported Models",
+            "url": "https://dortania.github.io/OpenCore-Legacy-Patcher/MODELS.html"
+          }
+        ]
+      },
+      "faq": {
+        "id": "faq",
+        "block": "faq",
+        "title": "OCLP wireless FAQ",
+        "description": "Common Wi-Fi and Bluetooth planning limits.",
+        "items": [
+          {
+            "question": "Why can Wi-Fi work for one user but fail for another?",
+            "answer": "Two Macs with similar names may have different wireless hardware, patches, or macOS versions."
+          },
+          {
+            "question": "Does this page provide kext downloads?",
+            "answer": "No. It does not mirror downloads or provide install files."
+          }
+        ]
+      }
+    }
+  }
+}

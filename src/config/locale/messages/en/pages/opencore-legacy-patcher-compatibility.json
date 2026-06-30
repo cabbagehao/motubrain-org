@@ -1,0 +1,81 @@
+{
+  "metadata": {
+    "title": "OpenCore Legacy Patcher Compatibility Checker",
+    "description": "Use an unofficial OCLP compatibility planning checker with links to Dortania supported models and troubleshooting sources."
+  },
+  "page": {
+    "title": "OpenCore Legacy Patcher Compatibility Checker",
+    "sections": {
+      "checker": {
+        "id": "opencore-legacy-patcher-compatibility",
+        "block": "oclp-checker",
+        "eyebrow": "OCLP compatibility",
+        "title": "Check an unsupported Mac before planning an OCLP upgrade",
+        "description": "Search a common Mac model identifier, review the planning note, then verify the exact model in the official Dortania supported models documentation before changing a machine.",
+        "defaultModel": "MacBookPro11,1",
+        "sources": [
+          {
+            "title": "Dortania Supported Models",
+            "url": "https://dortania.github.io/OpenCore-Legacy-Patcher/MODELS.html"
+          },
+          {
+            "title": "OpenCore Legacy Patcher documentation",
+            "url": "https://dortania.github.io/OpenCore-Legacy-Patcher/"
+          },
+          {
+            "title": "OCLP GitHub repository",
+            "url": "https://github.com/dortania/OpenCore-Legacy-Patcher"
+          }
+        ]
+      },
+      "workflow": {
+        "id": "compatibility-workflow",
+        "block": "features-step",
+        "title": "Compatibility planning workflow",
+        "description": "Treat this as a checklist before reading the official install and troubleshooting docs.",
+        "items": [
+          {
+            "title": "Find the exact identifier",
+            "description": "Use System Information to confirm a model identifier such as MacBookPro11,1, not just the marketing name.",
+            "icon": "Search"
+          },
+          {
+            "title": "Compare official support",
+            "description": "Open the Dortania supported models page and confirm the model appears in the current documentation.",
+            "icon": "BookOpenText"
+          },
+          {
+            "title": "Read hardware caveats",
+            "description": "Graphics, Wi-Fi, Bluetooth, and post-install root patches can change the risk profile.",
+            "icon": "ShieldAlert"
+          },
+          {
+            "title": "Back up first",
+            "description": "Do not treat a compatibility note as a guarantee. Back up and read current release notes before upgrading.",
+            "icon": "HardDrive"
+          }
+        ]
+      },
+      "faq": {
+        "id": "faq",
+        "block": "faq",
+        "title": "OpenCore Legacy Patcher compatibility FAQ",
+        "description": "Limits and source boundaries for this independent checker.",
+        "items": [
+          {
+            "question": "Is this an official OpenCore Legacy Patcher checker?",
+            "answer": "No. Motubrain.org is independent and links to official Dortania resources for verification."
+          },
+          {
+            "question": "Does a likely-supported result guarantee the upgrade will work?",
+            "answer": "No. Hardware condition, firmware, GPU, wireless cards, and current OCLP release notes can change the outcome."
+          },
+          {
+            "question": "Can I download OCLP from this site?",
+            "answer": "No. This site does not mirror downloads. Use the official OCLP documentation and GitHub repository."
+          }
+        ]
+      }
+    }
+  }
+}

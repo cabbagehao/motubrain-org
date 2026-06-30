@@ -9,7 +9,7 @@ import {
 } from '@/config/locale';
 import { getCanonicalUrl } from '@/shared/lib/seo';
 
-const sitemapLastModified = new Date('2026-06-27T00:00:00+00:00');
+const sitemapLastModified = new Date('2026-06-30T00:00:00+00:00');
 
 function normalizeRoutePath(routePath: string) {
   if (!routePath || routePath === '/') {

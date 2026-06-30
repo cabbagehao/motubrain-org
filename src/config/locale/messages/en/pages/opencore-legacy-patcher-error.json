@@ -1,0 +1,57 @@
+{
+  "metadata": {
+    "title": "OpenCore Legacy Patcher Error Guide",
+    "description": "Use an unofficial OCLP error triage page for model, root patch, Wi-Fi, Bluetooth, and non-Metal GPU troubleshooting paths."
+  },
+  "page": {
+    "title": "OpenCore Legacy Patcher Error Guide",
+    "sections": {
+      "checker": {
+        "id": "opencore-legacy-patcher-error",
+        "block": "oclp-checker",
+        "eyebrow": "Troubleshooting",
+        "title": "Start OCLP error triage with model and hardware context",
+        "description": "Most OCLP errors are easier to reason about after you know the exact Mac model, target macOS, GPU class, and wireless hardware.",
+        "defaultModel": "MacPro5,1",
+        "sources": [
+          {
+            "title": "OCLP troubleshooting",
+            "url": "https://dortania.github.io/OpenCore-Legacy-Patcher/TROUBLESHOOTING.html"
+          },
+          {
+            "title": "Dortania Supported Models",
+            "url": "https://dortania.github.io/OpenCore-Legacy-Patcher/MODELS.html"
+          }
+        ]
+      },
+      "workflow": {
+        "id": "error-workflow",
+        "block": "features-step",
+        "title": "Error triage sequence",
+        "description": "Do not jump to random patches before narrowing the failure category.",
+        "items": [
+          {
+            "title": "Record model and macOS",
+            "description": "Write down model identifier, target macOS, and OCLP version.",
+            "icon": "ClipboardList"
+          },
+          {
+            "title": "Separate boot from post-install",
+            "description": "Boot failures and post-install feature failures usually have different causes.",
+            "icon": "Split"
+          },
+          {
+            "title": "Check root patches",
+            "description": "Graphics and wireless behavior may depend on root patch status.",
+            "icon": "Wrench"
+          },
+          {
+            "title": "Use official troubleshooting",
+            "description": "Use official docs and issue context before changing EFI or system files.",
+            "icon": "BookOpenText"
+          }
+        ]
+      }
+    }
+  }
+}

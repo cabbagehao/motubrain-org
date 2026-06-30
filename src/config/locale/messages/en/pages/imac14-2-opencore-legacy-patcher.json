@@ -1,0 +1,45 @@
+{
+  "metadata": {
+    "title": "iMac14,2 OpenCore Legacy Patcher Compatibility",
+    "description": "Review iMac14,2 OCLP planning notes, model support checks, GPU caveats, and official source links."
+  },
+  "page": {
+    "title": "iMac14,2 OpenCore Legacy Patcher",
+    "sections": {
+      "checker": {
+        "id": "imac14-2-opencore-legacy-patcher",
+        "block": "oclp-checker",
+        "eyebrow": "Model page",
+        "title": "iMac14,2 OCLP planning notes",
+        "description": "iMac14,2 is a frequent OCLP search because the exact GPU and wireless setup can affect upgrade risk.",
+        "defaultModel": "iMac14,2",
+        "sources": [
+          {
+            "title": "Dortania Supported Models",
+            "url": "https://dortania.github.io/OpenCore-Legacy-Patcher/MODELS.html"
+          },
+          {
+            "title": "OCLP troubleshooting",
+            "url": "https://dortania.github.io/OpenCore-Legacy-Patcher/TROUBLESHOOTING.html"
+          }
+        ]
+      },
+      "faq": {
+        "id": "faq",
+        "block": "faq",
+        "title": "iMac14,2 OCLP FAQ",
+        "description": "Model-specific caveats before upgrading.",
+        "items": [
+          {
+            "question": "Why does GPU matter on iMac OCLP planning?",
+            "answer": "Graphics hardware affects acceleration, patch requirements, and which macOS version feels practical."
+          },
+          {
+            "question": "Is this an official iMac14,2 support page?",
+            "answer": "No. It is an independent planning page that points back to official OCLP resources."
+          }
+        ]
+      }
+    }
+  }
+}

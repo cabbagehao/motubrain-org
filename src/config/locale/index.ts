@@ -21,6 +21,15 @@ export const englishOnlyPageSlugs = [
   'privacy-policy',
   'terms-of-service',
   'world-action-model',
+  'opencore-legacy-patcher-compatibility',
+  'macos-sequoia-unsupported-mac',
+  'macos-sonoma-unsupported-mac',
+  'macbookpro11-1-opencore-legacy-patcher',
+  'imac14-2-opencore-legacy-patcher',
+  'opencore-legacy-patcher-error',
+  'opencore-legacy-patcher-wifi-bluetooth',
+  'opencore-legacy-patcher-non-metal-gpu',
+  'mrpack-to-zip',
 ] as const;
 
 export function isEnglishOnlyPageSlug(slugPath: string) {
@@ -52,6 +61,15 @@ export const localeMessagesRootPath = '@/config/locale/messages';
 export const localeMessagesPaths = [
   'common',
   'landing',
+  'pages/opencore-legacy-patcher-compatibility',
+  'pages/macos-sequoia-unsupported-mac',
+  'pages/macos-sonoma-unsupported-mac',
+  'pages/macbookpro11-1-opencore-legacy-patcher',
+  'pages/imac14-2-opencore-legacy-patcher',
+  'pages/opencore-legacy-patcher-error',
+  'pages/opencore-legacy-patcher-wifi-bluetooth',
+  'pages/opencore-legacy-patcher-non-metal-gpu',
+  'pages/mrpack-to-zip',
   'settings/sidebar',
   'settings/profile',
   'settings/security',

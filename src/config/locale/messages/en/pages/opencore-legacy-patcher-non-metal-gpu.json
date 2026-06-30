@@ -1,0 +1,45 @@
+{
+  "metadata": {
+    "title": "OpenCore Legacy Patcher Non-Metal GPU Caveats",
+    "description": "Review non-Metal GPU planning caveats for older Macs before using OpenCore Legacy Patcher."
+  },
+  "page": {
+    "title": "OpenCore Legacy Patcher Non-Metal GPU",
+    "sections": {
+      "checker": {
+        "id": "opencore-legacy-patcher-non-metal-gpu",
+        "block": "oclp-checker",
+        "eyebrow": "Graphics caveats",
+        "title": "Check non-Metal GPU risk before choosing a target macOS",
+        "description": "Older graphics hardware can be the biggest practical limit for an unsupported Mac upgrade.",
+        "defaultModel": "MacBookPro8,2",
+        "sources": [
+          {
+            "title": "Dortania Supported Models",
+            "url": "https://dortania.github.io/OpenCore-Legacy-Patcher/MODELS.html"
+          },
+          {
+            "title": "OCLP troubleshooting",
+            "url": "https://dortania.github.io/OpenCore-Legacy-Patcher/TROUBLESHOOTING.html"
+          }
+        ]
+      },
+      "faq": {
+        "id": "faq",
+        "block": "faq",
+        "title": "Non-Metal GPU FAQ",
+        "description": "What to verify before upgrading an older graphics setup.",
+        "items": [
+          {
+            "question": "What does non-Metal mean for OCLP planning?",
+            "answer": "It means the GPU lacks Apple's Metal graphics API support, which can affect acceleration and patch requirements."
+          },
+          {
+            "question": "Can OCLP make every non-Metal Mac feel modern?",
+            "answer": "No. Patches can help some systems, but hardware limits and performance tradeoffs remain."
+          }
+        ]
+      }
+    }
+  }
+}

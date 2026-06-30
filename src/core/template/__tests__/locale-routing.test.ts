@@ -10,8 +10,20 @@ import {
 
 test('english-only legal pages stay centralized in locale config', () => {
   assert.deepEqual(englishOnlyPageSlugs, [
+    'access-status',
+    'benchmarks',
     'privacy-policy',
     'terms-of-service',
+    'world-action-model',
+    'opencore-legacy-patcher-compatibility',
+    'macos-sequoia-unsupported-mac',
+    'macos-sonoma-unsupported-mac',
+    'macbookpro11-1-opencore-legacy-patcher',
+    'imac14-2-opencore-legacy-patcher',
+    'opencore-legacy-patcher-error',
+    'opencore-legacy-patcher-wifi-bluetooth',
+    'opencore-legacy-patcher-non-metal-gpu',
+    'mrpack-to-zip',
   ]);
 
   assert.equal(isEnglishOnlyPageSlug('privacy-policy'), true);

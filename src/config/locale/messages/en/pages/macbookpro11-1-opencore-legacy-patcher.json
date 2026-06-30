@@ -1,0 +1,45 @@
+{
+  "metadata": {
+    "title": "MacBookPro11,1 OpenCore Legacy Patcher Compatibility",
+    "description": "Check MacBookPro11,1 OCLP planning notes for Sonoma, Sequoia, graphics, wireless, and official model support links."
+  },
+  "page": {
+    "title": "MacBookPro11,1 OpenCore Legacy Patcher",
+    "sections": {
+      "checker": {
+        "id": "macbookpro11-1-opencore-legacy-patcher",
+        "block": "oclp-checker",
+        "eyebrow": "Model page",
+        "title": "MacBookPro11,1 OCLP planning notes",
+        "description": "MacBookPro11,1 is a common Late 2013 / Mid 2014 13-inch MacBook Pro identifier. Verify the exact model and current OCLP notes before choosing a macOS target.",
+        "defaultModel": "MacBookPro11,1",
+        "sources": [
+          {
+            "title": "Dortania Supported Models",
+            "url": "https://dortania.github.io/OpenCore-Legacy-Patcher/MODELS.html"
+          },
+          {
+            "title": "OCLP GitHub repository",
+            "url": "https://github.com/dortania/OpenCore-Legacy-Patcher"
+          }
+        ]
+      },
+      "faq": {
+        "id": "faq",
+        "block": "faq",
+        "title": "MacBookPro11,1 OCLP FAQ",
+        "description": "Model-specific planning caveats.",
+        "items": [
+          {
+            "question": "Is MacBookPro11,1 the same as every 2013 or 2014 MacBook Pro?",
+            "answer": "No. Confirm the exact identifier in System Information before comparing support notes."
+          },
+          {
+            "question": "Should I choose the newest macOS automatically?",
+            "answer": "No. Pick the version that balances app requirements, hardware caveats, and current OCLP release notes."
+          }
+        ]
+      }
+    }
+  }
+}
