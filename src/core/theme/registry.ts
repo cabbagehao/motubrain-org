@@ -38,6 +38,8 @@ const defaultBlockLoaders: Record<string, ThemeModuleLoader> = {
     import('@/themes/default/blocks/odysseus-ai-guide'),
   'oclp-checker': () => import('@/themes/default/blocks/oclp-checker'),
   'page-detail': () => import('@/themes/default/blocks/page-detail'),
+  'pdf-to-markdown-tool': () =>
+    import('@/themes/default/blocks/pdf-to-markdown-tool'),
   pricing: () => import('@/themes/default/blocks/pricing'),
   showcases: () => import('@/themes/default/blocks/showcases'),
   'showcases-flow': () => import('@/themes/default/blocks/showcases-flow'),

@@ -44,6 +44,17 @@ type McpConfigEventParams = {
   section?: string;
 };
 
+type DocumentToolEventParams = {
+  action:
+    | 'load_example'
+    | 'convert_text'
+    | 'copy_markdown'
+    | 'download_markdown';
+  inputChars?: number;
+  outputChars?: number;
+  section?: string;
+};
+
 type PricingItemListParams = {
   item: PricingItem;
   itemListName?: string;
@@ -225,6 +236,25 @@ export function trackMcpConfigEvent({
     action: normalizeText(action),
     status: normalizeText(status),
     issue_count: issueCount,
+    section: normalizeText(section),
+  });
+}
+
+export function trackDocumentToolEvent({
+  action,
+  inputChars,
+  outputChars,
+  section,
+}: DocumentToolEventParams) {
+  const eventName =
+    action === 'download_markdown'
+      ? 'document_tool_download'
+      : 'document_tool_success';
+
+  trackGaEvent(eventName, {
+    action: normalizeText(action),
+    input_chars: inputChars,
+    output_chars: outputChars,
     section: normalizeText(section),
   });
 }

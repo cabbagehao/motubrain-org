@@ -32,6 +32,7 @@ export const englishOnlyPageSlugs = [
   'mrpack-to-zip',
   'mcp-config-generator',
   'odysseus-ai',
+  'pdf-to-markdown',
 ] as const;
 
 export function isEnglishOnlyPageSlug(slugPath: string) {
@@ -74,6 +75,7 @@ export const localeMessagesPaths = [
   'pages/mrpack-to-zip',
   'pages/mcp-config-generator',
   'pages/odysseus-ai',
+  'pages/pdf-to-markdown',
   'settings/sidebar',
   'settings/profile',
   'settings/security',

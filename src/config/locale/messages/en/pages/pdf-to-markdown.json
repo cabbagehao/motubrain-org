@@ -1,0 +1,107 @@
+{
+  "metadata": {
+    "title": "PDF to Markdown for LLM Notes",
+    "description": "Prepare copied or exported PDF text as clean Markdown for LLM prompts, RAG notes, and source-backed document workflows."
+  },
+  "page": {
+    "title": "PDF to Markdown for LLM Notes",
+    "sections": {
+      "tool": {
+        "id": "pdf-to-markdown",
+        "block": "pdf-to-markdown-tool",
+        "eyebrow": "Document conversion utility",
+        "title": "Turn copied PDF text into Markdown for LLM workflows",
+        "description": "Paste text copied or exported from a PDF, clean broken paragraphs, normalize headings and lists, then copy or download a Markdown note for an LLM prompt, RAG draft, or source review.",
+        "source_boundary": "This browser-local page prepares text that you paste from a PDF. It does not parse encrypted, scanned, image-only, or layout-heavy PDF files, and it is not an official MarkItDown or Microsoft tool.",
+        "checklist": [
+          "Use this for copied or exported text from source PDFs, not for image-only scans.",
+          "Keep source URLs, paper titles, and page numbers in your notes before sending text to an LLM.",
+          "Review the Markdown output before using it in a RAG index or prompt.",
+          "Use MarkItDown, MinerU, or another full parser when you need tables, figures, OCR, or batch conversion."
+        ]
+      },
+      "workflow": {
+        "id": "pdf-markdown-workflow",
+        "block": "features-step",
+        "title": "A cautious PDF-to-Markdown workflow",
+        "description": "The first validation surface focuses on the common low-friction job: preparing extracted PDF text for LLM consumption without uploading it.",
+        "items": [
+          {
+            "title": "Extract text from the source PDF",
+            "description": "Copy text from the PDF viewer or export text with a trusted parser. Keep the original title, URL, and page references nearby.",
+            "icon": "FileText"
+          },
+          {
+            "title": "Clean paragraph breaks",
+            "description": "Paste the text here to collapse PDF line wraps, normalize bullet lists, and turn short section labels into Markdown headings.",
+            "icon": "WrapText"
+          },
+          {
+            "title": "Review before model use",
+            "description": "LLM-ready Markdown should preserve citations and warnings. Do not let cleanup remove source boundaries or table meaning.",
+            "icon": "ShieldCheck"
+          },
+          {
+            "title": "Escalate when parsing matters",
+            "description": "For scanned PDFs, tables, formulas, figures, or batch jobs, use a real document parser and treat this page as a manual review scratchpad.",
+            "icon": "FileSearch"
+          }
+        ]
+      },
+      "comparison": {
+        "id": "document-conversion-context",
+        "block": "features",
+        "title": "Where this fits beside full document converters",
+        "description": "The page is a small validation tool in Motubrain's document-conversion cluster, not a replacement for full PDF parsing stacks.",
+        "items": [
+          {
+            "title": "Good for quick copied text",
+            "description": "Use it when the PDF viewer already gives readable text and you mainly need Markdown cleanup before an LLM prompt.",
+            "icon": "ClipboardCheck"
+          },
+          {
+            "title": "Not for OCR or layout recovery",
+            "description": "Scans, tables, figures, math, and multi-column layouts need purpose-built PDF extraction before Markdown cleanup.",
+            "icon": "BadgeAlert"
+          },
+          {
+            "title": "MarkItDown context",
+            "description": "Microsoft MarkItDown and similar tools target multi-format conversion. This page documents the lightweight manual path while broader conversion tools are tested.",
+            "icon": "GitBranch"
+          },
+          {
+            "title": "Developer tool path",
+            "description": "The same document-conversion cluster can later support PDF-to-Markdown, MarkItDown MCP, and LLM document conversion pages only after GSC and event proof appears.",
+            "icon": "Workflow",
+            "url": "/mcp-config-generator",
+            "target": "_self"
+          }
+        ]
+      },
+      "faq": {
+        "id": "faq",
+        "block": "faq",
+        "title": "PDF to Markdown FAQ",
+        "description": "Scope and safety notes for this bounded validation tool.",
+        "items": [
+          {
+            "question": "Can this page upload and convert any PDF file?",
+            "answer": "No. This first validation page works with text you paste from a PDF or another extractor. It does not upload files or parse PDF binaries."
+          },
+          {
+            "question": "Why target PDF to Markdown if the tool starts from pasted text?",
+            "answer": "Many users already copy text from a PDF but need line-break cleanup, headings, bullets, and a Markdown download before using the text with an LLM. A full parser can be built only after this demand path shows signals."
+          },
+          {
+            "question": "Does Motubrain.org claim to be MarkItDown?",
+            "answer": "No. Motubrain.org is an independent developer utility site. MarkItDown is mentioned only as context for full document conversion workflows."
+          },
+          {
+            "question": "What leading indicators matter for this page?",
+            "answer": "URL-level GSC impressions for PDF-to-Markdown or LLM document conversion terms, plus document_tool_success and document_tool_download events."
+          }
+        ]
+      }
+    }
+  }
+}

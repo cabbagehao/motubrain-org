@@ -12,6 +12,11 @@
     "nav": {
       "items": [
         {
+          "title": "PDF to Markdown",
+          "url": "/pdf-to-markdown",
+          "target": "_self"
+        },
+        {
           "title": "MCP Config",
           "url": "/mcp-config-generator",
           "target": "_self"
@@ -333,6 +338,13 @@
         "title": "Careful source posture",
         "description": "Benchmark numbers on this site are reported as source claims, not independent certification by Motubrain.org.",
         "icon": "ShieldCheck"
+      },
+      {
+        "title": "Document conversion validation",
+        "description": "The new PDF-to-Markdown utility tests whether Motubrain can also serve LLM document-preparation workflows with measurable tool events.",
+        "icon": "FileText",
+        "url": "/pdf-to-markdown",
+        "target": "_self"
       }
     ]
   },
@@ -441,6 +453,11 @@
         {
           "title": "Site",
           "children": [
+            {
+              "title": "PDF to Markdown",
+              "url": "/pdf-to-markdown",
+              "target": "_self"
+            },
             {
               "title": "MCP Config Generator",
               "url": "/mcp-config-generator",

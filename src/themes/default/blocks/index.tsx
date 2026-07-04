@@ -30,3 +30,4 @@ export * from './oclp-checker';
 export * from './mcp-config-generator';
 export * from './mrpack-to-zip-tool';
 export * from './odysseus-ai-guide';
+export * from './pdf-to-markdown-tool';
