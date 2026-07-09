@@ -1,6 +1,6 @@
 'use client';
 
-import { useMemo, useState } from 'react';
+import { useMemo, useRef, useState } from 'react';
 import { ClipboardCheck, Copy, Download, FileText } from 'lucide-react';
 
 import { Button } from '@/shared/components/ui/button';
@@ -27,6 +27,7 @@ export function PdfToMarkdownTool({
 }) {
   const [inputText, setInputText] = useState(SAMPLE_TEXT);
   const [copied, setCopied] = useState(false);
+  const hasTrackedUserLoadedText = useRef(false);
   const markdown = useMemo(
     () => convertPdfTextToMarkdown(inputText),
     [inputText]
@@ -85,6 +86,24 @@ export function PdfToMarkdownTool({
       outputChars: stats.outputChars,
       section: section.id,
     });
+  }
+
+  function updateInputText(nextText: string) {
+    setInputText(nextText);
+
+    if (
+      !hasTrackedUserLoadedText.current &&
+      nextText.trim() &&
+      nextText !== SAMPLE_TEXT
+    ) {
+      hasTrackedUserLoadedText.current = true;
+      trackDocumentToolEvent({
+        action: 'text_loaded',
+        inputChars: nextText.length,
+        outputChars: convertPdfTextToMarkdown(nextText).length,
+        section: section.id,
+      });
+    }
   }
 
   return (
@@ -152,7 +171,7 @@ export function PdfToMarkdownTool({
             value={inputText}
             spellCheck={false}
             onBlur={convertNow}
-            onChange={(event) => setInputText(event.target.value)}
+            onChange={(event) => updateInputText(event.target.value)}
             className="border-input bg-muted/20 focus-visible:ring-ring min-h-56 w-full resize-y rounded-md border p-3 font-mono text-sm leading-6 outline-none focus-visible:ring-2"
           />
 

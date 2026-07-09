@@ -26,6 +26,7 @@ test('english-only legal pages stay centralized in locale config', () => {
     'mrpack-to-zip',
     'mcp-config-generator',
     'odysseus-ai',
+    'pdf-to-markdown',
   ]);
 
   assert.equal(isEnglishOnlyPageSlug('privacy-policy'), true);

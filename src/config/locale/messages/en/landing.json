@@ -341,7 +341,7 @@
       },
       {
         "title": "Document conversion validation",
-        "description": "The new PDF-to-Markdown utility tests whether Motubrain can also serve LLM document-preparation workflows with measurable tool events.",
+        "description": "The PDF-to-Markdown utility is the current Motubrain validation route for LLM document-preparation workflows, MarkItDown support, and measurable tool events.",
         "icon": "FileText",
         "url": "/pdf-to-markdown",
         "target": "_self"

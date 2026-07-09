@@ -47,6 +47,7 @@ type McpConfigEventParams = {
 type DocumentToolEventParams = {
   action:
     | 'load_example'
+    | 'text_loaded'
     | 'convert_text'
     | 'copy_markdown'
     | 'download_markdown';
@@ -249,7 +250,9 @@ export function trackDocumentToolEvent({
   const eventName =
     action === 'download_markdown'
       ? 'document_tool_download'
-      : 'document_tool_success';
+      : action === 'load_example' || action === 'text_loaded'
+        ? 'file_loaded'
+        : 'document_tool_success';
 
   trackGaEvent(eventName, {
     action: normalizeText(action),

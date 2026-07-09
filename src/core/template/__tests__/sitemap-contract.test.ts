@@ -33,6 +33,7 @@ test('default template sitemap includes the homepage and legal pages', () => {
     '/opencore-legacy-patcher-error',
     '/opencore-legacy-patcher-non-metal-gpu',
     '/opencore-legacy-patcher-wifi-bluetooth',
+    '/pdf-to-markdown',
     '/privacy-policy',
     '/terms-of-service',
     '/world-action-model',
