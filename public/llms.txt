@@ -1,0 +1,33 @@
+# Motubrain.org
+
+> Motubrain.org is an independent bilingual guide and tool hub covering ShengShu Technology's Motubrain World Action Model, embodied AI benchmark sources, current access status, browser-local document/config tools, and practical OpenCore Legacy Patcher planning notes.
+
+The site is not affiliated with ShengShu Technology, OpenCore Legacy Patcher, Dortania, Odysseus AI, or the other referenced projects. It separates official source links from independent explanations and does not claim to host Motubrain API access, model downloads, or official support.
+
+## Core Tools
+
+* [PDF to Markdown Online](https://motubrain.org/pdf-to-markdown): A browser-local PDF to Markdown cleanup tool for LLM notes, RAG preparation, MarkItDown review, copied PDF text, and source-backed document workflows.
+* [MCP Config Generator](https://motubrain.org/mcp-config-generator): A browser-local MCP config generator and JSON debugger for checking `mcpServers` snippets, security prompts, and setup boundaries for local AI developer tools.
+* [MRPack to ZIP Converter](https://motubrain.org/mrpack-to-zip): A local MRPack to ZIP converter that creates a `.zip` copy from `.mrpack` files for tools that expect a ZIP archive extension.
+
+## Main Content
+
+* [Motubrain World Action Model Guide](https://motubrain.org/): The main Motubrain guide explaining ShengShu Technology's World Action Model framing, embodied AI focus, architecture claims, source trail, and current access boundaries.
+* [World Action Model](https://motubrain.org/world-action-model): An educational World Action Model guide explaining WAM concepts, Motubrain context, embodied AI action prediction, and how to read model claims.
+* [Motubrain Benchmarks](https://motubrain.org/benchmarks): A Motubrain benchmark source guide for WorldArena, RoboTwin 2.0, EWMScore context, benchmark mechanics, and source-led interpretation.
+* [Motubrain Access Status](https://motubrain.org/access-status): A Motubrain API and access status page clarifying that current public materials describe the model but do not provide a self-serve API, downloadable model, or public demo on this site.
+* [Odysseus AI](https://motubrain.org/odysseus-ai): An independent Odysseus AI guide with official links, setup boundaries, and self-hosted local AI workspace comparison notes.
+
+## Unofficial OCLP Planning Guides
+
+* [OpenCore Legacy Patcher Compatibility Checker](https://motubrain.org/opencore-legacy-patcher-compatibility): An unofficial OCLP compatibility planning checker with links to Dortania supported models and troubleshooting sources.
+* [OpenCore Legacy Patcher Error Guide](https://motubrain.org/opencore-legacy-patcher-error): An unofficial OCLP error triage page for model checks, root patches, Wi-Fi, Bluetooth, and non-Metal GPU troubleshooting paths.
+* [OpenCore Legacy Patcher Wi-Fi and Bluetooth](https://motubrain.org/opencore-legacy-patcher-wifi-bluetooth): OCLP Wi-Fi and Bluetooth planning notes for checking Mac model, wireless hardware, root patches, and official docs.
+* [OpenCore Legacy Patcher Non-Metal GPU](https://motubrain.org/opencore-legacy-patcher-non-metal-gpu): OCLP non-Metal GPU caveats for older Macs, graphics limitations, post-install planning, and compatibility expectations.
+* [macOS Sequoia on Unsupported Mac](https://motubrain.org/macos-sequoia-unsupported-mac): A macOS Sequoia unsupported Mac planning guide for OCLP caveats, model checks, and official source links.
+* [macOS Sonoma on Unsupported Mac](https://motubrain.org/macos-sonoma-unsupported-mac): A macOS Sonoma unsupported Mac compatibility guide for model and hardware caveats before using OpenCore Legacy Patcher.
+
+## Company and Policies
+
+* [Privacy Policy](https://motubrain.org/privacy-policy): Explains privacy practices for the independent Motubrain.org guide and tool hub, including analytics, contact email, cookies, and browser-local tool data boundaries.
+* [Terms of Service](https://motubrain.org/terms-of-service): Defines Motubrain.org's independent informational scope, unofficial guide boundaries, tool-use limitations, and lack of official support or affiliation with referenced projects.
