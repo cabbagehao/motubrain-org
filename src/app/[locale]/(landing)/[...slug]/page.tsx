@@ -235,21 +235,6 @@ function buildStaticPageStructuredData({
     '@context': 'https://schema.org',
     '@graph': [
       {
-        '@type': 'Organization',
-        '@id': `${siteUrl}/#organization`,
-        name: envConfigs.app_name,
-        url: siteUrl,
-      },
-      {
-        '@type': 'WebSite',
-        '@id': `${siteUrl}/#website`,
-        name: envConfigs.app_name,
-        url: siteUrl,
-        publisher: {
-          '@id': `${siteUrl}/#organization`,
-        },
-      },
-      {
         '@type': ['WebPage', 'Article'],
         '@id': `${canonicalUrl}#webpage`,
         url: canonicalUrl,
