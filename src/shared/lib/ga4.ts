@@ -54,6 +54,7 @@ type DocumentToolEventParams = {
   inputChars?: number;
   outputChars?: number;
   section?: string;
+  proofEligible?: boolean;
 };
 
 type PricingItemListParams = {
@@ -246,19 +247,27 @@ export function trackDocumentToolEvent({
   inputChars,
   outputChars,
   section,
+  proofEligible = true,
 }: DocumentToolEventParams) {
   const eventName =
-    action === 'download_markdown'
-      ? 'document_tool_download'
-      : action === 'load_example' || action === 'text_loaded'
-        ? 'file_loaded'
-        : 'document_tool_success';
+    !proofEligible || action === 'load_example'
+      ? 'document_tool_demo_action'
+      : action === 'download_markdown'
+        ? 'document_tool_download'
+        : action === 'text_loaded'
+          ? 'file_loaded'
+          : 'document_tool_success';
 
   trackGaEvent(eventName, {
     action: normalizeText(action),
     input_chars: inputChars,
     output_chars: outputChars,
     section: normalizeText(section),
+    page_location:
+      typeof window === 'undefined' ? undefined : window.location.href,
+    route_id: 'pdf-markdown-conversion',
+    strategy_version: '2026-07-15.1',
+    proof_eligible: proofEligible,
   });
 }
 

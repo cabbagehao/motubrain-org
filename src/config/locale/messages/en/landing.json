@@ -17,8 +17,8 @@
           "target": "_self"
         },
         {
-          "title": "MCP Config",
-          "url": "/mcp-config-generator",
+          "title": "How it works",
+          "url": "/pdf-to-markdown#how-it-works",
           "target": "_self"
         },
         {
@@ -55,11 +55,11 @@
     },
     "buttons": [
       {
-        "title": "Official source",
-        "url": "https://www.shengshu.com/en/motubrain",
-        "target": "_blank",
+        "title": "Open PDF text tool",
+        "url": "/pdf-to-markdown",
+        "target": "_self",
         "variant": "outline",
-        "icon": "ArrowUpRight"
+        "icon": "FileText"
       }
     ],
     "user_nav": {
@@ -74,25 +74,25 @@
   },
   "hero": {
     "id": "hero",
-    "title": "Motubrain: the World Action Model for embodied AI",
-    "highlight_text": "Motubrain",
-    "description": "An independent bilingual guide to ShengShu Technology's Motubrain launch, benchmark claims, architecture, and current access status.",
+    "title": "Prepare copied PDF text for Markdown and LLM workflows",
+    "highlight_text": "PDF text",
+    "description": "A free browser-local cleanup tool for text copied or exported from PDFs. Fix broken paragraphs, preserve lists, preview Markdown, then copy or download the result.",
     "buttons": [
       {
-        "title": "Read the key facts",
-        "url": "/#facts",
+        "title": "Open PDF to Markdown tool",
+        "url": "/pdf-to-markdown",
         "target": "_self",
         "icon": "BookOpenText"
       },
       {
-        "title": "Open official source",
-        "url": "https://www.shengshu.com/en/motubrain",
-        "target": "_blank",
+        "title": "Read the conversion boundary",
+        "url": "/pdf-to-markdown#how-it-works",
+        "target": "_self",
         "variant": "outline",
         "icon": "ArrowUpRight"
       }
     ],
-    "tip": "Independent resource. Motubrain.org is not affiliated with ShengShu Technology.",
+    "tip": "Runs locally in your browser. It cleans pasted or exported text; it does not upload or parse PDF files.",
     "show_avatars": false,
     "show_award": false,
     "show_bg": true,

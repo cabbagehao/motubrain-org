@@ -25,7 +25,7 @@ export function PdfToMarkdownTool({
   section: Section;
   className?: string;
 }) {
-  const [inputText, setInputText] = useState(SAMPLE_TEXT);
+  const [inputText, setInputText] = useState('');
   const [copied, setCopied] = useState(false);
   const hasTrackedUserLoadedText = useRef(false);
   const markdown = useMemo(
@@ -48,10 +48,12 @@ export function PdfToMarkdownTool({
       inputChars: SAMPLE_TEXT.length,
       outputChars: convertPdfTextToMarkdown(SAMPLE_TEXT).length,
       section: section.id,
+      proofEligible: false,
     });
   }
 
   async function copyMarkdown() {
+    if (!markdown) return;
     await navigator.clipboard?.writeText(markdown);
     setCopied(true);
     trackDocumentToolEvent({
@@ -59,11 +61,13 @@ export function PdfToMarkdownTool({
       inputChars: stats.inputChars,
       outputChars: stats.outputChars,
       section: section.id,
+      proofEligible: inputText !== SAMPLE_TEXT,
     });
     window.setTimeout(() => setCopied(false), 1600);
   }
 
   function downloadMarkdown() {
+    if (!markdown) return;
     const blob = new Blob([markdown], { type: 'text/markdown;charset=utf-8' });
     const url = URL.createObjectURL(blob);
     const anchor = document.createElement('a');
@@ -76,15 +80,18 @@ export function PdfToMarkdownTool({
       inputChars: stats.inputChars,
       outputChars: stats.outputChars,
       section: section.id,
+      proofEligible: inputText !== SAMPLE_TEXT,
     });
   }
 
   function convertNow() {
+    if (!inputText.trim()) return;
     trackDocumentToolEvent({
       action: 'convert_text',
       inputChars: stats.inputChars,
       outputChars: stats.outputChars,
       section: section.id,
+      proofEligible: inputText !== SAMPLE_TEXT,
     });
   }
 
@@ -180,11 +187,16 @@ export function PdfToMarkdownTool({
               {stats.words} words · {stats.outputChars} Markdown characters
             </p>
             <div className="flex flex-wrap gap-2">
-              <Button size="sm" variant="outline" onClick={copyMarkdown}>
+              <Button
+                size="sm"
+                variant="outline"
+                onClick={copyMarkdown}
+                disabled={!markdown}
+              >
                 <Copy aria-hidden="true" />
                 {copied ? 'Copied' : 'Copy Markdown'}
               </Button>
-              <Button size="sm" onClick={downloadMarkdown}>
+              <Button size="sm" onClick={downloadMarkdown} disabled={!markdown}>
                 <Download aria-hidden="true" />
                 Download .md
               </Button>
