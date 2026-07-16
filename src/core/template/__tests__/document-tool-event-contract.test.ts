@@ -17,6 +17,14 @@ test('document conversion proof events carry active-route attribution', () => {
 test('example interactions cannot emit strong document conversion proof', () => {
   assert.match(analyticsSource, /'document_tool_demo_action'/);
   assert.match(toolSource, /proofEligible: false/);
-  assert.match(toolSource, /proofEligible: inputText !== SAMPLE_TEXT/);
+  assert.match(toolSource, /proofEligible: isProofEligibleInput\(inputText\)/);
   assert.match(toolSource, /useState\(''\)/);
+});
+
+test('strong proof requires a meaningful pasted document excerpt', () => {
+  assert.match(toolSource, /MIN_PROOF_INPUT_CHARS = 40/);
+  assert.match(toolSource, /normalized\.length >= MIN_PROOF_INPUT_CHARS/);
+  assert.match(toolSource, /onPaste=/);
+  assert.match(toolSource, /event\.clipboardData\.getData\('text'\)/);
+  assert.doesNotMatch(toolSource, /onChange=\{\(event\) => updateInputText/);
 });

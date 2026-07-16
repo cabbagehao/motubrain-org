@@ -18,6 +18,15 @@ Key uses
 - Keep bullet lists readable
 - Add a short source note before sending the text to a model`;
 
+const MIN_PROOF_INPUT_CHARS = 40;
+
+function isProofEligibleInput(input: string) {
+  const normalized = input.trim();
+  return (
+    normalized !== SAMPLE_TEXT && normalized.length >= MIN_PROOF_INPUT_CHARS
+  );
+}
+
 export function PdfToMarkdownTool({
   section,
   className,
@@ -61,7 +70,7 @@ export function PdfToMarkdownTool({
       inputChars: stats.inputChars,
       outputChars: stats.outputChars,
       section: section.id,
-      proofEligible: inputText !== SAMPLE_TEXT,
+      proofEligible: isProofEligibleInput(inputText),
     });
     window.setTimeout(() => setCopied(false), 1600);
   }
@@ -80,7 +89,7 @@ export function PdfToMarkdownTool({
       inputChars: stats.inputChars,
       outputChars: stats.outputChars,
       section: section.id,
-      proofEligible: inputText !== SAMPLE_TEXT,
+      proofEligible: isProofEligibleInput(inputText),
     });
   }
 
@@ -91,23 +100,17 @@ export function PdfToMarkdownTool({
       inputChars: stats.inputChars,
       outputChars: stats.outputChars,
       section: section.id,
-      proofEligible: inputText !== SAMPLE_TEXT,
+      proofEligible: isProofEligibleInput(inputText),
     });
   }
 
-  function updateInputText(nextText: string) {
-    setInputText(nextText);
-
-    if (
-      !hasTrackedUserLoadedText.current &&
-      nextText.trim() &&
-      nextText !== SAMPLE_TEXT
-    ) {
+  function trackPastedText(pastedText: string) {
+    if (!hasTrackedUserLoadedText.current && isProofEligibleInput(pastedText)) {
       hasTrackedUserLoadedText.current = true;
       trackDocumentToolEvent({
         action: 'text_loaded',
-        inputChars: nextText.length,
-        outputChars: convertPdfTextToMarkdown(nextText).length,
+        inputChars: pastedText.length,
+        outputChars: convertPdfTextToMarkdown(pastedText).length,
         section: section.id,
       });
     }
@@ -178,7 +181,10 @@ export function PdfToMarkdownTool({
             value={inputText}
             spellCheck={false}
             onBlur={convertNow}
-            onChange={(event) => updateInputText(event.target.value)}
+            onChange={(event) => setInputText(event.target.value)}
+            onPaste={(event) =>
+              trackPastedText(event.clipboardData.getData('text'))
+            }
             className="border-input bg-muted/20 focus-visible:ring-ring min-h-56 w-full resize-y rounded-md border p-3 font-mono text-sm leading-6 outline-none focus-visible:ring-2"
           />
 
