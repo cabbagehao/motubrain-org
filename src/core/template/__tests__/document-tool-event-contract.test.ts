@@ -28,3 +28,15 @@ test('strong proof requires a meaningful pasted document excerpt', () => {
   assert.match(toolSource, /event\.clipboardData\.getData\('text'\)/);
   assert.doesNotMatch(toolSource, /onChange=\{\(event\) => updateInputText/);
 });
+
+test('copy proof is emitted only after a successful clipboard write', () => {
+  assert.match(toolSource, /if \(!navigator\.clipboard\?\.writeText\) return/);
+  assert.match(
+    toolSource,
+    /await navigator\.clipboard\.writeText\(markdown\)[\s\S]*trackDocumentToolEvent/
+  );
+  assert.match(
+    toolSource,
+    /catch \{[\s\S]*not a successful document-tool outcome/
+  );
+});

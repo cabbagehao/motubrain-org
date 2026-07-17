@@ -63,16 +63,22 @@ export function PdfToMarkdownTool({
 
   async function copyMarkdown() {
     if (!markdown) return;
-    await navigator.clipboard?.writeText(markdown);
-    setCopied(true);
-    trackDocumentToolEvent({
-      action: 'copy_markdown',
-      inputChars: stats.inputChars,
-      outputChars: stats.outputChars,
-      section: section.id,
-      proofEligible: isProofEligibleInput(inputText),
-    });
-    window.setTimeout(() => setCopied(false), 1600);
+    if (!navigator.clipboard?.writeText) return;
+
+    try {
+      await navigator.clipboard.writeText(markdown);
+      setCopied(true);
+      trackDocumentToolEvent({
+        action: 'copy_markdown',
+        inputChars: stats.inputChars,
+        outputChars: stats.outputChars,
+        section: section.id,
+        proofEligible: isProofEligibleInput(inputText),
+      });
+      window.setTimeout(() => setCopied(false), 1600);
+    } catch {
+      // A denied clipboard write is not a successful document-tool outcome.
+    }
   }
 
   function downloadMarkdown() {
