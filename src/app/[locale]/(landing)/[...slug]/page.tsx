@@ -261,7 +261,9 @@ function buildStaticPageStructuredData({
                 ? 'Embodied AI benchmarks'
                 : slug === 'access-status'
                   ? 'Motubrain access status'
-                  : 'World Action Model',
+                  : slug === 'pdf-to-markdown'
+                    ? 'PDF to Markdown document conversion'
+                    : 'World Action Model',
           },
         ],
       },

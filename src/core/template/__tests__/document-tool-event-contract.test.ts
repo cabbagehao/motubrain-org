@@ -7,6 +7,10 @@ const toolSource = readFileSync(
   'src/themes/default/blocks/pdf-to-markdown-tool.tsx',
   'utf8'
 );
+const dynamicPageSource = readFileSync(
+  'src/app/[locale]/(landing)/[...slug]/page.tsx',
+  'utf8'
+);
 
 test('document conversion proof events carry active-route attribution', () => {
   assert.match(analyticsSource, /route_id: 'pdf-markdown-conversion'/);
@@ -39,4 +43,9 @@ test('copy proof is emitted only after a successful clipboard write', () => {
     toolSource,
     /catch \{[\s\S]*not a successful document-tool outcome/
   );
+});
+
+test('PDF route structured data describes document conversion', () => {
+  assert.match(dynamicPageSource, /slug === 'pdf-to-markdown'/);
+  assert.match(dynamicPageSource, /PDF to Markdown document conversion/);
 });

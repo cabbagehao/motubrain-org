@@ -1,4 +1,5 @@
 import assert from 'node:assert/strict';
+import { readFileSync } from 'node:fs';
 import test from 'node:test';
 
 import { buildPageMetadata, resolveMetadataKeywords } from '@/shared/lib/seo';
@@ -6,7 +7,10 @@ import { buildPageMetadata, resolveMetadataKeywords } from '@/shared/lib/seo';
 test('resolveMetadataKeywords stays empty by default and keeps an explicit primary keyword only', () => {
   assert.equal(resolveMetadataKeywords(), undefined);
   assert.equal(resolveMetadataKeywords('   '), undefined);
-  assert.equal(resolveMetadataKeywords('ai outfit generator'), 'ai outfit generator');
+  assert.equal(
+    resolveMetadataKeywords('ai outfit generator'),
+    'ai outfit generator'
+  );
 });
 
 test('buildPageMetadata keeps og and twitter metadata aligned with page metadata', () => {
@@ -42,7 +46,8 @@ test('buildPageMetadata leaves meta keywords empty unless an explicit primary ke
 
   const explicitKeywordMetadata = buildPageMetadata({
     title: 'Template Feature Page',
-    description: 'Metadata should preserve an explicit primary keyword when requested.',
+    description:
+      'Metadata should preserve an explicit primary keyword when requested.',
     canonicalUrl: 'https://example.com/feature',
     locale: 'en',
     keywords: 'ai outfit generator',
@@ -50,4 +55,14 @@ test('buildPageMetadata leaves meta keywords empty unless an explicit primary ke
 
   assert.equal(defaultMetadata.keywords, undefined);
   assert.equal(explicitKeywordMetadata.keywords, 'ai outfit generator');
+});
+
+test('English default metadata follows the active document-conversion route', () => {
+  const common = JSON.parse(
+    readFileSync('src/config/locale/messages/en/common.json', 'utf8')
+  );
+
+  assert.match(common.metadata.title, /PDF to Markdown/);
+  assert.match(common.metadata.description, /browser-local Markdown/);
+  assert.doesNotMatch(common.metadata.title, /World Action Model/);
 });
